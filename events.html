@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events & Announcements — Café Bloom</title>
+  <meta name="description" content="Stay up to date with the latest news, events, and announcements from Café Bloom, Quetta." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Lato:wght@300;400;700&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav nav--solid" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="Café Bloom Home">
+          <img src="assets/images/logo.jpg" alt="Café Bloom logo" width="52" height="52" />
+        </a>
+        <ul class="nav__links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html#location">Location</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="events.html" aria-current="page">Announcements</a></li>
+          <li><a href="contact.html">Bookings</a></li>
+        </ul>
+        <button class="nav__hamburger" aria-label="Open mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <nav class="nav__mobile" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="contact.html#location">Location</a>
+    <a href="menu.html">Menu</a>
+    <a href="events.html" aria-current="page">Announcements</a>
+    <a href="contact.html">Bookings</a>
+  </nav>
+  <div class="nav__overlay" role="presentation"></div>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="events-hero" aria-label="Events hero">
+      <div class="container">
+        <div class="events-hero__inner">
+          <p class="events-hero__tag">Always Something New ✦</p>
+          <h1 class="events-hero__title">
+            What's <em>Blooming</em><br />at Café Bloom
+          </h1>
+          <p class="events-hero__subtitle">
+            New menus, café updates, special events, and seasonal deals — this is where you find out first.
+          </p>
+          <div class="events-hero__pills">
+            <span class="events-hero__pill">🍕 New Menu</span>
+            <span class="events-hero__pill">☕ Café Updates</span>
+            <span class="events-hero__pill">🎉 Events</span>
+            <span class="events-hero__pill">🏷️ Promotions</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EVENTS GRID ===== -->
+    <section class="events-grid-section" aria-labelledby="events-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-tag">Latest from the Café</span>
+          <h2 class="section-title" id="events-heading">Announcements — See What's New</h2>
+        </div>
+
+        <div class="events-grid">
+
+          <!-- CARD 1 — New Menu -->
+          <article class="event-card event-card--menu">
+            <div class="event-card__image">
+              <span class="event-card__image-icon" aria-hidden="true">🍕</span>
+            </div>
+            <div class="event-card__body">
+              <div class="event-card__meta">
+                <span class="event-card__badge">New Menu</span>
+                <time class="event-card__date" datetime="2026-03-01">March 2026</time>
+              </div>
+              <h3 class="event-card__title">New Menu Announcement</h3>
+              <p class="event-card__text">
+                Our kitchen has been busy. We've added exciting new items across all categories — from bold new Signature Pizzas to refreshing seasonal drinks and upgraded pasta recipes. Whether you're a regular or visiting for the first time, there's something new waiting for you.
+              </p>
+              <button
+                class="btn-primary"
+                onclick="openModal('modal-menu')"
+                aria-haspopup="dialog"
+                aria-controls="modal-menu"
+              >
+                Read More
+              </button>
+            </div>
+          </article>
+
+          <!-- CARD 2 — Café Update -->
+          <article class="event-card event-card--update">
+            <div class="event-card__image">
+              <span class="event-card__image-icon" aria-hidden="true">☕</span>
+            </div>
+            <div class="event-card__body">
+              <div class="event-card__meta">
+                <span class="event-card__badge">Café Update</span>
+                <time class="event-card__date" datetime="2026-02-01">February 2026</time>
+              </div>
+              <h3 class="event-card__title">Café Update</h3>
+              <p class="event-card__text">
+                Café Bloom keeps growing. We've made improvements to the seating, updated our ordering process to be faster, and refreshed the atmosphere to make every visit feel even more special. Come see what's changed — we think you'll love it.
+              </p>
+              <button
+                class="btn-primary"
+                onclick="openModal('modal-update')"
+                aria-haspopup="dialog"
+                aria-controls="modal-update"
+              >
+                Read More
+              </button>
+            </div>
+          </article>
+
+          <!-- CARD 3 — Event -->
+          <article class="event-card event-card--event">
+            <div class="event-card__image">
+              <span class="event-card__image-icon" aria-hidden="true">🎉</span>
+            </div>
+            <div class="event-card__body">
+              <div class="event-card__meta">
+                <span class="event-card__badge">Event</span>
+                <time class="event-card__date" datetime="2026-04-15">April 2026</time>
+              </div>
+              <h3 class="event-card__title">Event Announcement</h3>
+              <p class="event-card__text">
+                Something special is coming to Café Bloom this spring. We're planning an evening you won't want to miss — good food, warm company, and a few surprises along the way. Follow us on Instagram for the full reveal and stay tuned for the date.
+              </p>
+              <button
+                class="btn-primary"
+                onclick="openModal('modal-event')"
+                aria-haspopup="dialog"
+                aria-controls="modal-event"
+              >
+                Read More
+              </button>
+            </div>
+          </article>
+
+          <!-- CARD 4 — Seasonal Promo -->
+          <article class="event-card event-card--promo">
+            <div class="event-card__image">
+              <span class="event-card__image-icon" aria-hidden="true">🌸</span>
+            </div>
+            <div class="event-card__body">
+              <div class="event-card__meta">
+                <span class="event-card__badge">Promotion</span>
+                <time class="event-card__date" datetime="2026-04-01">Limited Time</time>
+              </div>
+              <h3 class="event-card__title">Seasonal Promotion</h3>
+              <p class="event-card__text">
+                Spring is here and so are our seasonal deals. For a limited time, enjoy special discounts on selected drinks and menu combos. Order in-café or message us directly on WhatsApp to claim your offer before it's gone.
+              </p>
+              <button
+                class="btn-primary"
+                onclick="openModal('modal-promo')"
+                aria-haspopup="dialog"
+                aria-controls="modal-promo"
+              >
+                Read More
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INSTAGRAM STRIP ===== -->
+    <section class="events-ig-strip" aria-label="Follow on Instagram">
+      <div class="container">
+        <span class="events-ig-strip__tag">Never miss an update</span>
+        <h2 class="events-ig-strip__title">Follow us on Instagram for live updates</h2>
+        <a
+          href="https://www.instagram.com/cafebloom7"
+          class="btn-ig"
+          target="_blank"
+          rel="noopener"
+          aria-label="Follow Café Bloom on Instagram"
+        >
+          📸 &nbsp;@cafebloom7
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== MODALS ===== -->
+
+  <!-- Modal: New Menu -->
+  <div class="event-modal-overlay" id="modal-menu" role="dialog" aria-modal="true" aria-labelledby="modal-menu-title">
+    <div class="event-modal">
+      <div class="event-modal__image-wrap">
+        <div class="event-modal__image event-card--menu" style="background: linear-gradient(135deg, #4A5C3F, #7A9B5F);">
+          <span style="font-size:4rem;" aria-hidden="true">🍕</span>
+        </div>
+        <button class="event-modal__close" onclick="closeModal('modal-menu')" aria-label="Close modal">&#10005;</button>
+      </div>
+      <div class="event-modal__body">
+        <div class="event-modal__meta">
+          <span class="event-card__badge" style="background: var(--color-green);">New Menu</span>
+          <time class="event-card__date" datetime="2026-03-01">March 2026</time>
+        </div>
+        <h2 class="event-modal__title" id="modal-menu-title">New Menu Announcement</h2>
+        <p class="event-modal__text">
+          We've been working hard in the kitchen and we're thrilled to introduce the latest additions to the Café Bloom menu.
+        </p>
+        <p class="event-modal__text">
+          New Signature Pizzas have joined the lineup, including limited-edition flavour combinations you won't find anywhere else in Quetta. On the drinks side, we've introduced fresh seasonal coolers and new cold coffee blends made in-house.
+        </p>
+        <p class="event-modal__text">
+          Our pasta section has also been upgraded — same bold flavours, refined preparation. Visit us or order on WhatsApp to be the first to try the new additions.
+        </p>
+        <div class="event-modal__actions">
+          <a href="menu.html" class="btn-primary">View Full Menu</a>
+          <a href="https://wa.me/923422953399" class="btn-outline-green" target="_blank" rel="noopener">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Café Update -->
+  <div class="event-modal-overlay" id="modal-update" role="dialog" aria-modal="true" aria-labelledby="modal-update-title">
+    <div class="event-modal">
+      <div class="event-modal__image-wrap">
+        <div class="event-modal__image" style="background: linear-gradient(135deg, #2C1A0E, #5C3D25);">
+          <span style="font-size:4rem;" aria-hidden="true">☕</span>
+        </div>
+        <button class="event-modal__close" onclick="closeModal('modal-update')" aria-label="Close modal">&#10005;</button>
+      </div>
+      <div class="event-modal__body">
+        <div class="event-modal__meta">
+          <span class="event-card__badge" style="background: var(--color-brown);">Café Update</span>
+          <time class="event-card__date" datetime="2026-02-01">February 2026</time>
+        </div>
+        <h2 class="event-modal__title" id="modal-update-title">Café Update</h2>
+        <p class="event-modal__text">
+          Café Bloom has always been a place built on warmth and hospitality. This update is our commitment to making that experience even better.
+        </p>
+        <p class="event-modal__text">
+          We've expanded our seating to accommodate more guests comfortably, introduced a cleaner ordering flow for dine-in guests, and refreshed key areas of the café's interior. The atmosphere feels brighter, the service faster, and the overall vibe more true to what Café Bloom is all about.
+        </p>
+        <p class="event-modal__text">
+          Come visit us and experience the difference. We can't wait to welcome you.
+        </p>
+        <div class="event-modal__actions">
+          <a href="contact.html" class="btn-primary">Book a Table</a>
+          <a href="contact.html#location" class="btn-outline-green">Find Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Event -->
+  <div class="event-modal-overlay" id="modal-event" role="dialog" aria-modal="true" aria-labelledby="modal-event-title">
+    <div class="event-modal">
+      <div class="event-modal__image-wrap">
+        <div class="event-modal__image" style="background: linear-gradient(135deg, #C8102E, #E8651A);">
+          <span style="font-size:4rem;" aria-hidden="true">🎉</span>
+        </div>
+        <button class="event-modal__close" onclick="closeModal('modal-event')" aria-label="Close modal">&#10005;</button>
+      </div>
+      <div class="event-modal__body">
+        <div class="event-modal__meta">
+          <span class="event-card__badge" style="background: var(--color-primary);">Event</span>
+          <time class="event-card__date" datetime="2026-04-15">April 2026</time>
+        </div>
+        <h2 class="event-modal__title" id="modal-event-title">Event Announcement</h2>
+        <p class="event-modal__text">
+          Café Bloom is hosting its first community evening — an evening of food, connection, and good company right here in Hazara Town.
+        </p>
+        <p class="event-modal__text">
+          Expect a curated menu, a warm atmosphere, and the kind of evening that stays with you. We'll be sharing the full date, timings, and registration details on our Instagram soon.
+        </p>
+        <p class="event-modal__text">
+          Follow @cafebloom7 to be the first to know, or message us on WhatsApp to express your interest.
+        </p>
+        <div class="event-modal__actions">
+          <a href="https://www.instagram.com/cafebloom7" class="btn-primary" target="_blank" rel="noopener">Follow on Instagram</a>
+          <a href="https://wa.me/923422953399" class="btn-outline-green" target="_blank" rel="noopener">Message Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Seasonal Promo -->
+  <div class="event-modal-overlay" id="modal-promo" role="dialog" aria-modal="true" aria-labelledby="modal-promo-title">
+    <div class="event-modal">
+      <div class="event-modal__image-wrap">
+        <div class="event-modal__image" style="background: linear-gradient(135deg, #E8651A, #F5A623);">
+          <span style="font-size:4rem;" aria-hidden="true">🌸</span>
+        </div>
+        <button class="event-modal__close" onclick="closeModal('modal-promo')" aria-label="Close modal">&#10005;</button>
+      </div>
+      <div class="event-modal__body">
+        <div class="event-modal__meta">
+          <span class="event-card__badge" style="background: var(--color-orange);">Promotion</span>
+          <time class="event-card__date">Limited Time</time>
+        </div>
+        <h2 class="event-modal__title" id="modal-promo-title">Seasonal Promotion</h2>
+        <p class="event-modal__text">
+          Spring is the season of new beginnings — and at Café Bloom, we're celebrating with special deals on some of your favourite items.
+        </p>
+        <p class="event-modal__text">
+          For a limited time, enjoy discounts on selected drinks, combo deals on pizza and burgers, and a free dip sauce with any pizza order. These offers are available for dine-in and WhatsApp orders.
+        </p>
+        <p class="event-modal__text">
+          Don't wait — seasonal promotions won't last forever. Message us on WhatsApp to claim your deal today.
+        </p>
+        <div class="event-modal__actions">
+          <a href="https://wa.me/923422953399" class="btn-primary" target="_blank" rel="noopener">Claim on WhatsApp</a>
+          <a href="menu.html" class="btn-outline-green">Browse Menu</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="assets/images/logo.jpg" alt="Café Bloom logo" width="52" height="52" loading="lazy" />
+          <p class="footer__tagline">let your day bloom</p>
+          <p>A warm corner in Hazara Town where every cup, every bite, and every moment is crafted with love.</p>
+          <a href="https://www.instagram.com/cafebloom7" class="footer__instagram" target="_blank" rel="noopener">&#9670; @cafebloom7</a>
+        </div>
+        <div class="footer__nav">
+          <h3 class="footer__heading">Navigate</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="events.html">Announcements</a></li>
+            <li><a href="contact.html">Bookings</a></li>
+          </ul>
+        </div>
+        <div class="footer__menu-links">
+          <h3 class="footer__heading">Menu</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="menu.html">Coffee</a></li>
+            <li><a href="menu.html">Drinks</a></li>
+            <li><a href="menu.html">Pizza</a></li>
+            <li><a href="menu.html">Burgers</a></li>
+            <li><a href="menu.html">Pasta</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact-info">
+          <h3 class="footer__heading">Find Us</h3>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">📍</span>
+            <span>Kirani Rd, Shoukat Stop, Hazara Town, Quetta</span>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">📱</span>
+            <span>0342 2953399 / 0370599818</span>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">🕐</span>
+            <span>Mon – Sun &nbsp;|&nbsp; 12pm – 12am</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__floral" aria-hidden="true">
+        <svg width="400" height="60" viewBox="0 0 400 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="30" x2="160" y2="30" stroke="#F5F0E8" stroke-width="1"/>
+          <g transform="translate(200, 30)">
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(60)"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(120)"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(180)"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(240)"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(300)"/>
+            <circle cx="0" cy="0" r="6" fill="#C8102E"/>
+          </g>
+          <line x1="240" y1="30" x2="400" y2="30" stroke="#F5F0E8" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 Café Bloom. All rights reserved.</p>
+        <p class="footer__copyright">Crafted with love in Quetta 🌸</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+
+  <!-- ===== MODAL JS ===== -->
+  <script>
+  (function() {
+    'use strict';
+
+    const openModal = (id) => {
+      const overlay = document.getElementById(id);
+      if (!overlay) return;
+      overlay.style.display = 'flex';
+      // Trigger transition on next frame
+      requestAnimationFrame(() => overlay.classList.add('open'));
+      document.body.style.overflow = 'hidden';
+      // Focus close button for accessibility
+      const closeBtn = overlay.querySelector('.event-modal__close');
+      closeBtn?.focus();
+    };
+
+    const closeModal = (id) => {
+      const overlay = document.getElementById(id);
+      if (!overlay) return;
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(() => { overlay.style.display = 'none'; }, 300);
+    };
+
+    // Close on overlay click (outside modal box)
+    document.querySelectorAll('.event-modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeModal(overlay.id);
+      });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.event-modal-overlay.open').forEach(overlay => {
+          closeModal(overlay.id);
+        });
+      }
+    });
+
+    // Expose to global scope for inline onclick handlers
+    window.openModal = openModal;
+    window.closeModal = closeModal;
+  })();
+  </script>
+
+</body>
+</html>
