@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — Café Bloom</title>
+  <meta name="description" content="Explore Café Bloom's full menu — pizza, burgers, pasta, coffee and more. Order in Quetta or via WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Lato:wght@300;400;700&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav nav--solid" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="Café Bloom Home">
+          <img src="assets/images/logo.jpg" alt="Café Bloom logo" width="52" height="52" />
+        </a>
+        <ul class="nav__links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html#location">Location</a></li>
+          <li><a href="menu.html" aria-current="page">Menu</a></li>
+          <li><a href="events.html">Announcements</a></li>
+          <li><a href="contact.html">Bookings</a></li>
+        </ul>
+        <button class="nav__hamburger" aria-label="Open mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <nav class="nav__mobile" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="contact.html#location">Location</a>
+    <a href="menu.html" aria-current="page">Menu</a>
+    <a href="events.html">Announcements</a>
+    <a href="contact.html">Bookings</a>
+  </nav>
+  <div class="nav__overlay" role="presentation"></div>
+
+  <main>
+
+    <!-- ===== MENU HERO ===== -->
+    <section class="menu-hero" aria-label="Menu hero">
+      <div class="container">
+        <div class="menu-hero__inner">
+          <p class="menu-hero__tag">Our Full Menu ✦</p>
+          <h1 class="menu-hero__title">A <em>Bloomed</em> New<br />Flavour Awaits</h1>
+          <p class="menu-hero__subtitle">From hand-stretched pizzas to cold refreshing drinks — every item made to delight.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TAB BAR ===== -->
+    <div class="menu-tabs-bar" role="tablist" aria-label="Menu categories">
+      <div class="container">
+        <div class="menu-tabs-bar__inner">
+          <button class="menu-tab-btn active" data-tab="drinks" role="tab" aria-selected="true" aria-controls="panel-drinks">☕ Drinks</button>
+          <button class="menu-tab-btn" data-tab="food" role="tab" aria-selected="false" aria-controls="panel-food">🍝 Food</button>
+          <button class="menu-tab-btn" data-tab="pizza" role="tab" aria-selected="false" aria-controls="panel-pizza">🍕 Pizza</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MENU PANELS ===== -->
+    <section class="menu-body" aria-label="Menu items">
+      <div class="container">
+
+        <!-- ===== DRINKS PANEL ===== -->
+        <div class="menu-tab-panel active" id="panel-drinks" data-panel="drinks" role="tabpanel" aria-labelledby="tab-drinks">
+
+          <div class="menu-section">
+            <div class="menu-section__header">
+              <div class="menu-section__icon" aria-hidden="true">☕</div>
+              <div>
+                <h2 class="menu-section__label">Coffee & Hot Drinks</h2>
+                <span class="menu-section__sublabel">Crafted with care, served with warmth</span>
+              </div>
+            </div>
+            <div class="menu-items-grid">
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Espresso">☕</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Espresso</h3>
+                  <p class="menu-item-card__desc">Rich, bold single shot — the heart of every great coffee.</p>
+                  <p class="menu-item-card__price">Rs. 250</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Latte">☕</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Café Latte</h3>
+                  <p class="menu-item-card__desc">Smooth espresso topped with velvety steamed milk.</p>
+                  <p class="menu-item-card__price">Rs. 350</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Cappuccino">☕</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Cappuccino</h3>
+                  <p class="menu-item-card__desc">Equal parts espresso, steamed milk, and silky foam.</p>
+                  <p class="menu-item-card__price">Rs. 350</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Americano">☕</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Americano</h3>
+                  <p class="menu-item-card__desc">Espresso diluted with hot water — clean and classic.</p>
+                  <p class="menu-item-card__price">Rs. 280</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Mocha">☕</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Mocha</h3>
+                  <p class="menu-item-card__desc">Espresso meets rich chocolate — indulgent and warming.</p>
+                  <p class="menu-item-card__price">Rs. 380</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Hot Chocolate">🍫</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Hot Chocolate</h3>
+                  <p class="menu-item-card__desc">Creamy, velvety chocolate warmth in every sip.</p>
+                  <p class="menu-item-card__price">Rs. 320</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="menu-section">
+            <div class="menu-section__header">
+              <div class="menu-section__icon" aria-hidden="true">🥤</div>
+              <div>
+                <h2 class="menu-section__label">Cold Drinks & Shakes</h2>
+                <span class="menu-section__sublabel">Cool down, refresh, and enjoy</span>
+              </div>
+            </div>
+            <div class="menu-items-grid">
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Cold Coffee">🥤</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Cold Coffee</h3>
+                  <p class="menu-item-card__desc">Chilled blended coffee — smooth, sweet, and refreshing.</p>
+                  <p class="menu-item-card__price">Rs. 350</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Strawberry Shake">🍓</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Strawberry Shake</h3>
+                  <p class="menu-item-card__desc">Fresh strawberry blended into a thick, creamy shake.</p>
+                  <p class="menu-item-card__price">Rs. 400</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Chocolate Shake">🍫</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Chocolate Shake</h3>
+                  <p class="menu-item-card__desc">Rich chocolate blended to perfection with ice cream.</p>
+                  <p class="menu-item-card__price">Rs. 420</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Mango Cooler">🥭</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Mango Cooler</h3>
+                  <p class="menu-item-card__desc">Tropical mango blended fresh — summer in a glass.</p>
+                  <p class="menu-item-card__price">Rs. 380</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Mint Lemonade">🍋</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Mint Lemonade</h3>
+                  <p class="menu-item-card__desc">Zesty lemon with fresh mint — crisp and reviving.</p>
+                  <p class="menu-item-card__price">Rs. 320</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Bloom Cooler">🌸</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Bloom Cooler</h3>
+                  <p class="menu-item-card__desc">Our signature house cooler — a seasonal blend of fruit and refreshment.</p>
+                  <p class="menu-item-card__price">Rs. 450</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+        </div>
+        <!-- end drinks panel -->
+
+        <!-- ===== FOOD PANEL ===== -->
+        <div class="menu-tab-panel" id="panel-food" data-panel="food" role="tabpanel" aria-labelledby="tab-food">
+
+          <!-- Pasta -->
+          <div class="menu-section">
+            <div class="menu-section__header">
+              <div class="menu-section__icon" aria-hidden="true">🍝</div>
+              <div>
+                <h2 class="menu-section__label">Pasta</h2>
+                <span class="menu-section__sublabel">Bold flavours, every time</span>
+              </div>
+            </div>
+            <div class="menu-items-grid">
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Mexican Crunch">🍝</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Mexican Crunch</h3>
+                  <p class="menu-item-card__desc">Spicy, bold, and unforgettable — our most-loved pasta.</p>
+                  <p class="menu-item-card__price">Rs. 949</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Penni Special">🍝</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Penni Special</h3>
+                  <p class="menu-item-card__desc">Penne cooked in our special house sauce — simple, satisfying.</p>
+                  <p class="menu-item-card__price">Rs. 849</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Bloom Special Pasta">🌸</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Bloom Special</h3>
+                  <p class="menu-item-card__desc">Café Bloom's signature pasta creation — rich and flavourful.</p>
+                  <p class="menu-item-card__price">Rs. 949</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Spice Blast Pasta">🔥</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Spice Blast</h3>
+                  <p class="menu-item-card__desc">For spice lovers — packed with heat and intense flavour.</p>
+                  <p class="menu-item-card__price">Rs. 649</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Macron Special">🍝</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Macron Special</h3>
+                  <p class="menu-item-card__desc">Macaroni tossed in a creamy, well-seasoned sauce.</p>
+                  <p class="menu-item-card__price">Rs. 699</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Malai Special Pasta">🍝</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Malai Special</h3>
+                  <p class="menu-item-card__desc">Creamy malai sauce with tender chicken — comfort in a bowl.</p>
+                  <p class="menu-item-card__price">Rs. 749</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Burgers -->
+          <div class="menu-section">
+            <div class="menu-section__header">
+              <div class="menu-section__icon" aria-hidden="true">🍔</div>
+              <div>
+                <h2 class="menu-section__label">Burgers</h2>
+                <span class="menu-section__sublabel">Stacked, loaded, and made to satisfy</span>
+              </div>
+            </div>
+            <div class="menu-items-grid">
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Chicken Patty Burger">🍔</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Chicken Patty</h3>
+                  <p class="menu-item-card__desc">Classic crispy chicken patty burger — always a great choice.</p>
+                  <p class="menu-item-card__price">Rs. 499</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Pizza Burger">🍕</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Pizza Burger</h3>
+                  <p class="menu-item-card__desc">Where pizza meets burger — the best of both worlds.</p>
+                  <p class="menu-item-card__price">Rs. 549</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Zinger Burger">🍔</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Zinger Burger</h3>
+                  <p class="menu-item-card__desc">Hot, crunchy, and satisfying. The classic Zinger done right.</p>
+                  <p class="menu-item-card__price">Rs. 599</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Mexican Double Crunch">🌮</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Mexican Double Crunch</h3>
+                  <p class="menu-item-card__desc">Double the crunch, double the heat — Mexican spice packed in.</p>
+                  <p class="menu-item-card__price">Rs. 1,099</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Tower Special Burger">🏰</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Tower Special</h3>
+                  <p class="menu-item-card__desc">Towering layers of chicken, sauce, and toppings — a statement burger.</p>
+                  <p class="menu-item-card__price">Rs. 849</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Beef Smashed Burger">🥩</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Beef Smashed</h3>
+                  <p class="menu-item-card__desc">Smashed beef patty with caramelised crust — juicy and bold.</p>
+                  <p class="menu-item-card__price">Rs. 799</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Beef Double Burger">🥩</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Beef Double</h3>
+                  <p class="menu-item-card__desc">Two patties, double the satisfaction — for serious appetite.</p>
+                  <p class="menu-item-card__price">Rs. 1,499</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Mexican Beef Burger">🌶️</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Mexican Beef</h3>
+                  <p class="menu-item-card__desc">Beef patty with fiery Mexican seasoning — bold and flavourful.</p>
+                  <p class="menu-item-card__price">Rs. 849</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Nug Burger">🍗</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Nug Burger</h3>
+                  <p class="menu-item-card__desc">Crispy nuggets stacked into a fun, snackable burger.</p>
+                  <p class="menu-item-card__price">Rs. 449</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Nuggets -->
+          <div class="menu-section">
+            <div class="menu-section__header">
+              <div class="menu-section__icon" aria-hidden="true">🍗</div>
+              <div>
+                <h2 class="menu-section__label">Nuggets</h2>
+                <span class="menu-section__sublabel">Crispy bites, perfect for sharing</span>
+              </div>
+            </div>
+            <div class="menu-items-grid">
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Nuggets 6pc">🍗</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Special Nuggets — 6 Pcs</h3>
+                  <p class="menu-item-card__desc">Six crispy, golden special nuggets served with dipping sauce.</p>
+                  <p class="menu-item-card__price">Rs. 349</p>
+                </div>
+              </article>
+              <article class="menu-item-card">
+                <div class="menu-item-card__thumb" aria-label="Nuggets 12pc">🍗</div>
+                <div class="menu-item-card__body">
+                  <h3 class="menu-item-card__name">Special Nuggets — 12 Pcs</h3>
+                  <p class="menu-item-card__desc">Twelve pieces — great for sharing or going all in alone.</p>
+                  <p class="menu-item-card__price">Rs. 549</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+        </div>
+        <!-- end food panel -->
+
+        <!-- ===== PIZZA PANEL ===== -->
+        <div class="menu-tab-panel" id="panel-pizza" data-panel="pizza" role="tabpanel" aria-labelledby="tab-pizza">
+
+          <!-- Standard Pizza -->
+          <div class="menu-section">
+            <div class="menu-section__header">
+              <div class="menu-section__icon" aria-hidden="true">🍕</div>
+              <div>
+                <h2 class="menu-section__label">Standard Pizza</h2>
+                <span class="menu-section__sublabel">Classic favourites, perfectly crafted</span>
+              </div>
+            </div>
+
+            <table class="pizza-sizes-table" aria-label="Standard pizza sizes and prices">
+              <thead>
+                <tr>
+                  <th>Pizza</th>
+                  <th><span class="pizza-size-badge">S</span> Small</th>
+                  <th><span class="pizza-size-badge">M</span> Medium</th>
+                  <th><span class="pizza-size-badge">L</span> Large</th>
+                  <th><span class="pizza-size-badge">XL</span> XL</th>
+                  <th><span class="pizza-size-badge">XX</span> XXL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>🍕 Tikka</td>
+                  <td>Rs. 449</td><td>Rs. 849</td><td>Rs. 1,199</td><td>Rs. 1,699</td><td>Rs. 2,199</td>
+                </tr>
+                <tr>
+                  <td>🌮 Fajita</td>
+                  <td>Rs. 449</td><td>Rs. 849</td><td>Rs. 1,199</td><td>Rs. 1,699</td><td>Rs. 2,199</td>
+                </tr>
+                <tr>
+                  <td>🍗 Malai Boti</td>
+                  <td>Rs. 449</td><td>Rs. 849</td><td>Rs. 1,199</td><td>Rs. 1,699</td><td>Rs. 2,199</td>
+                </tr>
+                <tr>
+                  <td>👑 Supreme</td>
+                  <td>Rs. 449</td><td>Rs. 849</td><td>Rs. 1,199</td><td>Rs. 1,699</td><td>Rs. 2,199</td>
+                </tr>
+                <tr>
+                  <td>🔥 Hot Silican</td>
+                  <td>Rs. 449</td><td>Rs. 849</td><td>Rs. 1,199</td><td>Rs. 1,699</td><td>Rs. 2,199</td>
+                </tr>
+                <tr>
+                  <td>🇮🇹 Classic Euro</td>
+                  <td>Rs. 449</td><td>Rs. 849</td><td>Rs. 1,199</td><td>Rs. 1,699</td><td>Rs. 2,199</td>
+                </tr>
+                <tr>
+                  <td>🌶️ Mexican 360 Spices</td>
+                  <td>Rs. 449</td><td>Rs. 849</td><td>Rs. 1,199</td><td>Rs. 1,699</td><td>Rs. 2,199</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Signature Pizza -->
+          <div class="menu-section">
+            <div class="menu-section__header">
+              <div class="menu-section__icon" aria-hidden="true">⭐</div>
+              <div>
+                <h2 class="menu-section__label">Signature Pizza</h2>
+                <span class="menu-section__sublabel">Premium creations — our best work</span>
+              </div>
+            </div>
+
+            <table class="pizza-sizes-table" aria-label="Signature pizza sizes and prices">
+              <thead>
+                <tr>
+                  <th>Pizza</th>
+                  <th><span class="pizza-size-badge">S</span> Small</th>
+                  <th><span class="pizza-size-badge">M</span> Medium</th>
+                  <th><span class="pizza-size-badge">L</span> Large</th>
+                  <th><span class="pizza-size-badge">XL</span> XL</th>
+                  <th><span class="pizza-size-badge">XX</span> XXL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>🍕 Big Bite</td>
+                  <td>Rs. 549</td><td>Rs. 949</td><td>Rs. 1,499</td><td>Rs. 1,999</td><td>Rs. 2,499</td>
+                </tr>
+                <tr>
+                  <td>🗽 New York Stuffed Crust</td>
+                  <td>Rs. 549</td><td>Rs. 949</td><td>Rs. 1,499</td><td>Rs. 1,999</td><td>Rs. 2,499</td>
+                </tr>
+                <tr>
+                  <td>🌸 Café Bloom Special</td>
+                  <td>Rs. 549</td><td>Rs. 949</td><td>Rs. 1,499</td><td>Rs. 1,999</td><td>Rs. 2,499</td>
+                </tr>
+                <tr>
+                  <td>🧀 Double Melt Special</td>
+                  <td>Rs. 549</td><td>Rs. 949</td><td>Rs. 1,499</td><td>Rs. 1,999</td><td>Rs. 2,499</td>
+                </tr>
+                <tr>
+                  <td>🌙 Kebab 2 Night</td>
+                  <td>Rs. 549</td><td>Rs. 949</td><td>Rs. 1,499</td><td>Rs. 1,999</td><td>Rs. 2,499</td>
+                </tr>
+                <tr>
+                  <td>👑 Crown Crust</td>
+                  <td>Rs. 549</td><td>Rs. 949</td><td>Rs. 1,499</td><td>Rs. 1,999</td><td>Rs. 2,499</td>
+                </tr>
+                <tr>
+                  <td>🧀 Cheesy Stuffed</td>
+                  <td>Rs. 549</td><td>Rs. 949</td><td>Rs. 1,499</td><td>Rs. 1,999</td><td>Rs. 2,499</td>
+                </tr>
+                <tr>
+                  <td>🥙 Kebab Stuffed</td>
+                  <td>Rs. 549</td><td>Rs. 949</td><td>Rs. 1,499</td><td>Rs. 1,999</td><td>Rs. 2,499</td>
+                </tr>
+                <tr>
+                  <td>🍕 Half &amp; Half</td>
+                  <td>Rs. 549</td><td>Rs. 949</td><td>Rs. 1,499</td><td>Rs. 1,999</td><td>Rs. 2,499</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Sauces & Extras -->
+          <div class="menu-section">
+            <div class="menu-section__header">
+              <div class="menu-section__icon" aria-hidden="true">🥫</div>
+              <div>
+                <h2 class="menu-section__label">Sauces & Extras</h2>
+                <span class="menu-section__sublabel">Take it to the next level</span>
+              </div>
+            </div>
+
+            <div class="menu-items-row" aria-label="Sauces">
+              <div class="sauce-chip">Dip Sauce <span class="sauce-chip__price">Rs. 100</span></div>
+              <div class="sauce-chip">Special Sauce <span class="sauce-chip__price">Rs. 150</span></div>
+              <div class="sauce-chip">Big Mac <span class="sauce-chip__price">Rs. 150</span></div>
+              <div class="sauce-chip">Mexican Spice <span class="sauce-chip__price">Rs. 100</span></div>
+            </div>
+
+            <div style="margin-top: 28px;">
+              <h3 style="font-family: var(--font-display); font-size: 1rem; color: var(--color-brown); margin-bottom: 12px; opacity: 0.7;">Extra Toppings (Chicken &amp; Cheese)</h3>
+              <div class="menu-items-row" aria-label="Extra toppings by size">
+                <div class="sauce-chip">Small <span class="sauce-chip__price">Rs. 50</span></div>
+                <div class="sauce-chip">Medium <span class="sauce-chip__price">Rs. 80</span></div>
+                <div class="sauce-chip">Large <span class="sauce-chip__price">Rs. 100</span></div>
+                <div class="sauce-chip">XL <span class="sauce-chip__price">Rs. 150</span></div>
+                <div class="sauce-chip">XXL <span class="sauce-chip__price">Rs. 190</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- end pizza panel -->
+
+      </div>
+    </section>
+
+    <!-- ===== ORDER CTA STRIP ===== -->
+    <section style="background: var(--color-primary); padding: 48px 0; text-align: center;">
+      <div class="container">
+        <p style="font-family: var(--font-accent); font-size: 1.3rem; color: rgba(255,255,255,0.75); margin-bottom: 10px;">Ready to order?</p>
+        <h2 style="font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 900; color: #fff; margin-bottom: 24px;">Order directly on WhatsApp</h2>
+        <a href="https://wa.me/923422953399" class="btn-secondary" target="_blank" rel="noopener" style="border-color: #fff; color: #fff;">
+          💬 &nbsp; Message Us Now
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="assets/images/logo.jpg" alt="Café Bloom logo" width="52" height="52" loading="lazy" />
+          <p class="footer__tagline">let your day bloom</p>
+          <p>A warm corner in Hazara Town where every cup, every bite, and every moment is crafted with love.</p>
+          <a href="https://www.instagram.com/cafebloom7" class="footer__instagram" target="_blank" rel="noopener">&#9670; @cafebloom7</a>
+        </div>
+        <div class="footer__nav">
+          <h3 class="footer__heading">Navigate</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="events.html">Announcements</a></li>
+            <li><a href="contact.html">Bookings</a></li>
+          </ul>
+        </div>
+        <div class="footer__menu-links">
+          <h3 class="footer__heading">Menu</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="menu.html">Coffee</a></li>
+            <li><a href="menu.html">Drinks</a></li>
+            <li><a href="menu.html">Pizza</a></li>
+            <li><a href="menu.html">Burgers</a></li>
+            <li><a href="menu.html">Pasta</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact-info">
+          <h3 class="footer__heading">Find Us</h3>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">📍</span>
+            <span>Kirani Rd, Shoukat Stop, Hazara Town, Quetta</span>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">📱</span>
+            <span>0342 2953399 / 0370599818</span>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">🕐</span>
+            <span>Mon – Sun &nbsp;|&nbsp; 12pm – 12am</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__floral" aria-hidden="true">
+        <svg width="400" height="60" viewBox="0 0 400 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="30" x2="160" y2="30" stroke="#F5F0E8" stroke-width="1"/>
+          <g transform="translate(200, 30)">
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(60)"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(120)"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(180)"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(240)"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(300)"/>
+            <circle cx="0" cy="0" r="6" fill="#C8102E"/>
+          </g>
+          <line x1="240" y1="30" x2="400" y2="30" stroke="#F5F0E8" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 Café Bloom. All rights reserved.</p>
+        <p class="footer__copyright">Crafted with love in Quetta 🌸</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

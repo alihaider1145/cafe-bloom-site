@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café Bloom — Let Your Day Bloom</title>
+  <meta name="description" content="Café Bloom is a warm, cozy café in Quetta, Pakistan. Coffee, pizza, drinks and more. Let your day bloom." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Lato:wght@300;400;700&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav nav--transparent" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="Café Bloom Home">
+          <img src="assets/images/logo.jpg" alt="Café Bloom logo" width="52" height="52" />
+        </a>
+        <ul class="nav__links" role="list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="contact.html#location">Location</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="events.html">Announcements</a></li>
+          <li><a href="contact.html">Bookings</a></li>
+        </ul>
+        <button class="nav__hamburger" aria-label="Open mobile menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <nav class="nav__mobile" aria-label="Mobile navigation">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="contact.html#location">Location</a>
+    <a href="menu.html">Menu</a>
+    <a href="events.html">Announcements</a>
+    <a href="contact.html">Bookings</a>
+  </nav>
+  <div class="nav__overlay" role="presentation"></div>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-label="Hero">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__illustration" aria-hidden="true">
+            <svg viewBox="0 0 520 500" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <circle cx="260" cy="250" r="220" fill="#EDE8DC" opacity="0.6"/>
+
+              <path d="M 130 440 C 115 380 148 300 130 210" stroke="#4A5C3F" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M 105 278 C 122 285 122 315 105 322 C 88 315 88 285 105 278 Z"
+                fill="#7A9B5F" opacity="0.9" transform="rotate(-20 105 300)"/>
+              <path d="M 155 250 C 170 258 170 284 155 290 C 140 284 140 258 155 250 Z"
+                fill="#4A5C3F" opacity="0.8" transform="rotate(15 155 270)"/>
+              <g transform="translate(130, 170)">
+                <ellipse cx="0" cy="-39" rx="18" ry="26" fill="#9B5E3A"/>
+                <path d="M 0 -65 C -12 -52 12 -28 0 -10" stroke="#F5F0E8" stroke-width="5" fill="none" stroke-linecap="round"/>
+                <ellipse cx="0" cy="-39" rx="18" ry="26" fill="#9B5E3A" transform="rotate(72)"/>
+                <path d="M 0 -65 C -12 -52 12 -28 0 -10" stroke="#F5F0E8" stroke-width="5" fill="none" stroke-linecap="round" transform="rotate(72)"/>
+                <ellipse cx="0" cy="-39" rx="18" ry="26" fill="#9B5E3A" transform="rotate(144)"/>
+                <path d="M 0 -65 C -12 -52 12 -28 0 -10" stroke="#F5F0E8" stroke-width="5" fill="none" stroke-linecap="round" transform="rotate(144)"/>
+                <ellipse cx="0" cy="-39" rx="18" ry="26" fill="#9B5E3A" transform="rotate(216)"/>
+                <path d="M 0 -65 C -12 -52 12 -28 0 -10" stroke="#F5F0E8" stroke-width="5" fill="none" stroke-linecap="round" transform="rotate(216)"/>
+                <ellipse cx="0" cy="-39" rx="18" ry="26" fill="#9B5E3A" transform="rotate(288)"/>
+                <path d="M 0 -65 C -12 -52 12 -28 0 -10" stroke="#F5F0E8" stroke-width="5" fill="none" stroke-linecap="round" transform="rotate(288)"/>
+                <circle cx="0" cy="0" r="11" fill="#EFA040"/>
+              </g>
+
+              <path d="M 260 440 C 305 360 215 240 260 145" stroke="#4A5C3F" stroke-width="5" fill="none" stroke-linecap="round"/>
+              <path d="M 231 294 C 255 302 255 356 231 356 C 207 348 207 302 231 294 Z"
+                fill="#7A9B5F" opacity="0.9" transform="rotate(-25 231 325)"/>
+              <path d="M 292 237 C 313 246 313 284 292 293 C 271 284 271 246 292 237 Z"
+                fill="#4A5C3F" opacity="0.8" transform="rotate(20 292 265)"/>
+              <g transform="translate(260, 108)">
+                <ellipse cx="0" cy="-34" rx="16" ry="23" fill="#9B5E3A"/>
+                <path d="M 0 -57 C -11 -45 11 -23 0 -8" stroke="#F5F0E8" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                <ellipse cx="0" cy="-34" rx="16" ry="23" fill="#9B5E3A" transform="rotate(72)"/>
+                <path d="M 0 -57 C -11 -45 11 -23 0 -8" stroke="#F5F0E8" stroke-width="4.5" fill="none" stroke-linecap="round" transform="rotate(72)"/>
+                <ellipse cx="0" cy="-34" rx="16" ry="23" fill="#9B5E3A" transform="rotate(144)"/>
+                <path d="M 0 -57 C -11 -45 11 -23 0 -8" stroke="#F5F0E8" stroke-width="4.5" fill="none" stroke-linecap="round" transform="rotate(144)"/>
+                <ellipse cx="0" cy="-34" rx="16" ry="23" fill="#9B5E3A" transform="rotate(216)"/>
+                <path d="M 0 -57 C -11 -45 11 -23 0 -8" stroke="#F5F0E8" stroke-width="4.5" fill="none" stroke-linecap="round" transform="rotate(216)"/>
+                <ellipse cx="0" cy="-34" rx="16" ry="23" fill="#9B5E3A" transform="rotate(288)"/>
+                <path d="M 0 -57 C -11 -45 11 -23 0 -8" stroke="#F5F0E8" stroke-width="4.5" fill="none" stroke-linecap="round" transform="rotate(288)"/>
+                <circle cx="0" cy="0" r="13" fill="#EFA040"/>
+              </g>
+
+            <path d="M 390 440 C 400 375 410 300 392 220" stroke="#4A5C3F" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <path d="M 384 282 C 396 288 396 312 384 318 C 372 312 372 288 384 282 Z"
+              fill="#7A9B5F" opacity="0.8" transform="rotate(-20 384 300)"/>
+            <path d="M 417 317 C 428 322 428 344 417 349 C 406 344 406 322 417 317 Z"
+              fill="#4A5C3F" opacity="0.75" transform="rotate(30 417 333)"/>
+              <g transform="translate(390, 190)">
+                <ellipse cx="0" cy="-26" rx="12" ry="18" fill="#9B5E3A"/>
+                <path d="M 0 -44 C -9 -34 9 -18 0 -6" stroke="#F5F0E8" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                <ellipse cx="0" cy="-26" rx="12" ry="18" fill="#9B5E3A" transform="rotate(72)"/>
+                <path d="M 0 -44 C -9 -34 9 -18 0 -6" stroke="#F5F0E8" stroke-width="3.5" fill="none" stroke-linecap="round" transform="rotate(72)"/>
+                <ellipse cx="0" cy="-26" rx="12" ry="18" fill="#9B5E3A" transform="rotate(144)"/>
+                <path d="M 0 -44 C -9 -34 9 -18 0 -6" stroke="#F5F0E8" stroke-width="3.5" fill="none" stroke-linecap="round" transform="rotate(144)"/>
+                <ellipse cx="0" cy="-26" rx="12" ry="18" fill="#9B5E3A" transform="rotate(216)"/>
+                <path d="M 0 -44 C -9 -34 9 -18 0 -6" stroke="#F5F0E8" stroke-width="3.5" fill="none" stroke-linecap="round" transform="rotate(216)"/>
+                <ellipse cx="0" cy="-26" rx="12" ry="18" fill="#9B5E3A" transform="rotate(288)"/>
+                <path d="M 0 -44 C -9 -34 9 -18 0 -6" stroke="#F5F0E8" stroke-width="3.5" fill="none" stroke-linecap="round" transform="rotate(288)"/>
+                <circle cx="0" cy="0" r="9" fill="#EFA040"/>
+              </g>
+
+              <line x1="185" y1="440" x2="195" y2="350" stroke="#7A9B5F" stroke-width="3" stroke-linecap="round"/>
+              <ellipse cx="195" cy="340" rx="8" ry="14" fill="#9B5E3A" opacity="0.6"/>
+
+              <line x1="335" y1="440" x2="325" y2="360" stroke="#7A9B5F" stroke-width="3" stroke-linecap="round"/>
+              <ellipse cx="325" cy="350" rx="8" ry="13" fill="#9B5E3A" opacity="0.55"/>
+
+              <path d="M60 440 Q70 410 80 440" stroke="#7A9B5F" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <path d="M80 440 Q90 415 100 440" stroke="#4A5C3F" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <path d="M420 440 Q430 412 440 440" stroke="#7A9B5F" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <path d="M440 440 Q450 418 460 440" stroke="#4A5C3F" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <circle cx="80" cy="160" r="4" fill="#E8651A" opacity="0.4"/>
+              <circle cx="440" cy="200" r="3" fill="#C8102E" opacity="0.35"/>
+              <circle cx="340" cy="130" r="5" fill="#7A9B5F" opacity="0.3"/>
+              <circle cx="160" cy="350" r="3" fill="#E8651A" opacity="0.25"/>
+            </svg>
+
+              <circle cx="80" cy="160" r="4" fill="#E8651A" opacity="0.4"/>
+              <circle cx="440" cy="200" r="3" fill="#C8102E" opacity="0.35"/>
+              <circle cx="340" cy="130" r="5" fill="#7A9B5F" opacity="0.3"/>
+              <circle cx="160" cy="350" r="3" fill="#E8651A" opacity="0.25"/>
+            </svg>
+          </div>  
+          
+          <div class="hero__content">
+            <p class="hero__label">Quetta's Favourite Café ✦</p>
+            <div class="hero__title">
+              <img src="./assets/images/hero-text.png" alt="Let Your Day Bloom" class="img-bloom">
+            </div>
+            <p class="hero__subtitle">
+              Hand-crafted coffee, wood-fired pizza, and every little bite made with love — right here in Hazara Town, Quetta.
+            </p>
+            <div class="hero__ctas">
+              <a href="https://wa.me/923422953399" class="btn-primary" target="_blank" rel="noopener">
+                Order Online
+              </a>
+              <a href="contact.html#location" class="btn-secondary">
+                Visit Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CATEGORIES ===== -->
+    <section class="categories" aria-labelledby="categories-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">What We Serve</span>
+          <h2 class="section-title" id="categories-title">Something for Every Craving</h2>
+        </div>
+        <div class="categories__grid">
+
+          <article class="category-card" tabindex="0">
+            <div class="category-card__image" aria-hidden="true">☕</div>
+            <h3 class="category-card__title">Coffee</h3>
+            <p class="category-card__desc">From rich espressos to velvety lattes — every cup is crafted to start your day right.</p>
+          </article>
+
+          <article class="category-card" tabindex="0">
+            <div class="category-card__image" aria-hidden="true">🥤</div>
+            <h3 class="category-card__title">Drinks</h3>
+            <p class="category-card__desc">Refreshing shakes, coolers, and seasonal specials to quench every thirst.</p>
+          </article>
+
+          <article class="category-card" tabindex="0">
+            <div class="category-card__image" aria-hidden="true">🍕</div>
+            <h3 class="category-card__title">Pizza</h3>
+            <p class="category-card__desc">Standard and signature pies — from Tikka to Crown Crust — all made with love.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURED ===== -->
+    <section class="featured" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="featured__inner">
+          <div class="featured__left">
+            <p class="featured__eyebrow">Featured Malika Bites</p>
+            <h2 class="featured__title" id="featured-title">Little Bites.<br />Big Moments.</h2>
+            <p class="featured__subtitle">Our most-loved bites, handpicked from the kitchen. Each dish tells a story — let yours begin here.</p>
+            <a href="menu.html" class="btn-outline-green">View All Menu</a>
+          </div>
+
+          <div class="featured__cards">
+
+            <article class="featured-card">
+              <div class="featured-card__image" aria-label="Bloom Special Pizza image placeholder">🍕</div>
+              <div class="featured-card__body">
+                <span class="featured-card__badge">Signature</span>
+                <h3 class="featured-card__name">Café Bloom Special</h3>
+                <p class="featured-card__desc">Our house signature pizza — loaded with premium toppings on a perfectly crisp crust.</p>
+                <p class="featured-card__price">From Rs. 549</p>
+              </div>
+            </article>
+
+            <article class="featured-card">
+              <div class="featured-card__image" aria-label="Mexican Crunch Pasta image placeholder">🍝</div>
+              <div class="featured-card__body">
+                <span class="featured-card__badge">Fan Favourite</span>
+                <h3 class="featured-card__name">Mexican Crunch Pasta</h3>
+                <p class="featured-card__desc">Bold, spicy, and unforgettable. This one keeps people coming back.</p>
+                <p class="featured-card__price">Rs. 949</p>
+              </div>
+            </article>
+
+            <article class="featured-card">
+              <div class="featured-card__image" aria-label="Tower Special Burger image placeholder">🍔</div>
+              <div class="featured-card__body">
+                <span class="featured-card__badge">Must Try</span>
+                <h3 class="featured-card__name">Tower Special Burger</h3>
+                <p class="featured-card__desc">Stacked high and packed with flavour — the tower that never disappoints.</p>
+                <p class="featured-card__price">Rs. 849</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ANNOUNCEMENTS ===== -->
+    <section class="announcements" aria-labelledby="announcements-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Stay in the Loop</span>
+          <h2 class="section-title" id="announcements-title">Announcements — See What's New</h2>
+        </div>
+        <div class="announcements__grid">
+
+          <article class="announcement-card">
+            <span class="announcement-card__badge">New Menu</span>
+            <h3 class="announcement-card__title">New Menu Announcement</h3>
+            <p class="announcement-card__text">Exciting new items have joined our menu — from bold new pizzas to refreshing seasonal drinks. Your favourites just got some company.</p>
+            <a href="events.html" class="btn-outline-white">Read More</a>
+          </article>
+
+          <article class="announcement-card">
+            <span class="announcement-card__badge">Café Update</span>
+            <h3 class="announcement-card__title">Café Update</h3>
+            <p class="announcement-card__text">We've made some changes to make your Café Bloom experience even better. New seating, new vibes, same love.</p>
+            <a href="events.html" class="btn-outline-white">Read More</a>
+          </article>
+
+          <article class="announcement-card">
+            <span class="announcement-card__badge">Event</span>
+            <h3 class="announcement-card__title">Event Announcement</h3>
+            <p class="announcement-card__text">Something special is coming to Café Bloom. Keep your eyes open — you won't want to miss this one.</p>
+            <a href="events.html" class="btn-outline-white">Read More</a>
+          </article>
+
+          <article class="announcement-card">
+            <span class="announcement-card__badge">Promotion</span>
+            <h3 class="announcement-card__title">Seasonal Promotion</h3>
+            <p class="announcement-card__text">Limited-time deals on your favourite bites and drinks. Available for a limited window — visit us or order on WhatsApp now.</p>
+            <a href="https://wa.me/923422953399" class="btn-outline-white" target="_blank" rel="noopener">Order Now</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Happy Customers</span>
+          <h2 class="section-title" id="testimonials-title">What Our Customers Say?</h2>
+        </div>
+
+        <div class="testimonials__carousel" role="region" aria-label="Customer testimonials">
+          <div class="testimonials__track">
+
+            <div class="testimonial-slide" role="tabpanel">
+              <div class="testimonial-card">
+                <div class="testimonial-card__avatar" aria-hidden="true">AR</div>
+                <p class="testimonial-card__name">Ali Raza</p>
+                <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-card__text">"Café Bloom is hands down the best café in Quetta. The Crown Crust pizza is absolutely unreal, and the atmosphere is so warm and welcoming. I come here every weekend now."</p>
+              </div>
+            </div>
+
+            <div class="testimonial-slide" role="tabpanel">
+              <div class="testimonial-card">
+                <div class="testimonial-card__avatar" aria-hidden="true">SF</div>
+                <p class="testimonial-card__name">Sara Fatima</p>
+                <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-card__text">"The Mexican Crunch Pasta completely changed how I think about pasta. The staff is so friendly and the place feels like home. Highly recommend to everyone in Hazara Town!"</p>
+              </div>
+            </div>
+
+            <div class="testimonial-slide" role="tabpanel">
+              <div class="testimonial-card">
+                <div class="testimonial-card__avatar" aria-hidden="true">ZK</div>
+                <p class="testimonial-card__name">Zubair Khan</p>
+                <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-card__text">"Ordered the Tower Special Burger and I was blown away. The coffee is perfect every single time. Café Bloom really lives up to its name — it makes your whole day bloom."</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="testimonials__controls">
+          <button class="testimonials__btn testimonials__btn--prev" aria-label="Previous testimonial">&#8592;</button>
+          <div class="testimonials__dots" role="tablist" aria-label="Testimonial navigation">
+            <button class="testimonials__dot active" role="tab" aria-label="Testimonial 1" aria-selected="true"></button>
+            <button class="testimonials__dot" role="tab" aria-label="Testimonial 2" aria-selected="false"></button>
+            <button class="testimonials__dot" role="tab" aria-label="Testimonial 3" aria-selected="false"></button>
+          </div>
+          <button class="testimonials__btn testimonials__btn--next" aria-label="Next testimonial">&#8594;</button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+
+        <div class="footer__brand">
+          <img src="assets/images/logo.jpg" alt="Café Bloom logo" width="52" height="52" loading="lazy" />
+          <p class="footer__tagline">let your day bloom</p>
+          <p>A warm corner in Hazara Town where every cup, every bite, and every moment is crafted with love.</p>
+          <a href="https://www.instagram.com/cafebloom7" class="footer__instagram" target="_blank" rel="noopener">
+            &#9670; @cafebloom7
+          </a>
+        </div>
+
+        <div class="footer__nav">
+          <h3 class="footer__heading">Navigate</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="events.html">Announcements</a></li>
+            <li><a href="contact.html">Bookings</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__menu-links">
+          <h3 class="footer__heading">Menu</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="menu.html">Coffee</a></li>
+            <li><a href="menu.html">Drinks</a></li>
+            <li><a href="menu.html">Pizza</a></li>
+            <li><a href="menu.html">Burgers</a></li>
+            <li><a href="menu.html">Pasta</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__contact-info">
+          <h3 class="footer__heading">Find Us</h3>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">📍</span>
+            <span>Kirani Rd, Shoukat Stop, Hazara Town, Quetta</span>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">📱</span>
+            <span>0342 2953399 / 0370599818</span>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">🕐</span>
+            <span>Mon – Sun &nbsp;|&nbsp; 12pm – 12am</span>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">💬</span>
+            <a href="https://wa.me/923422953399" target="_blank" rel="noopener" style="color: rgba(245,240,232,0.65);">
+              Order on WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Floral SVG decoration -->
+      <div class="footer__floral" aria-hidden="true">
+        <svg width="400" height="60" viewBox="0 0 400 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="30" x2="160" y2="30" stroke="#F5F0E8" stroke-width="1"/>
+          <g transform="translate(200, 30)">
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(60)"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(120)"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(180)"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(240)"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(300)"/>
+            <circle cx="0" cy="0" r="6" fill="#C8102E"/>
+          </g>
+          <line x1="240" y1="30" x2="400" y2="30" stroke="#F5F0E8" stroke-width="1"/>
+        </svg>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 Café Bloom. All rights reserved.</p>
+        <p class="footer__copyright">Crafted with love in Quetta 🌸</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

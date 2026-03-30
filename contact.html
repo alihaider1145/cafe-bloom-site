@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Bookings — Café Bloom</title>
+  <meta name="description" content="Reserve a table, place an order, or find us in Hazara Town, Quetta. Contact Café Bloom on WhatsApp or visit us on Kirani Road." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Lato:wght@300;400;700&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav nav--solid" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="Café Bloom Home">
+          <img src="assets/images/logo.jpg" alt="Café Bloom logo" width="52" height="52" />
+        </a>
+        <ul class="nav__links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html#location">Location</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="events.html">Announcements</a></li>
+          <li><a href="contact.html" aria-current="page">Bookings</a></li>
+        </ul>
+        <button class="nav__hamburger" aria-label="Open mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <nav class="nav__mobile" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="contact.html#location">Location</a>
+    <a href="menu.html">Menu</a>
+    <a href="events.html">Announcements</a>
+    <a href="contact.html" aria-current="page">Bookings</a>
+  </nav>
+  <div class="nav__overlay" role="presentation"></div>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="contact-hero" aria-label="Contact page hero">
+      <div class="container">
+        <div class="contact-hero__inner">
+          <p class="contact-hero__tag">We'd Love to Hear From You ✦</p>
+          <h1 class="contact-hero__title">
+            Reservations &amp; <em>Orders</em>
+          </h1>
+          <p class="contact-hero__subtitle">
+            Book a table, send us a message, or just drop by — Café Bloom is always ready to welcome you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FORM + SIDE INFO ===== -->
+    <section class="contact-body" aria-labelledby="form-heading">
+      <div class="container">
+        <div class="contact-body__grid">
+
+          <!-- FORM BLOCK -->
+          <div class="contact-form-block">
+            <h2 class="contact-form-block__heading" id="form-heading">Send Us a Message</h2>
+            <p class="contact-form-block__sub">Fill in the form below and we'll get back to you as soon as possible. For faster responses, reach us on WhatsApp.</p>
+
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="e.g. Ali"
+                    autocomplete="given-name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="e.g. Raza"
+                    autocomplete="family-name"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="username">Username / Handle</label>
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="@yourhandle"
+                    autocomplete="username"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@email.com"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell us about your reservation, order, or anything else on your mind..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-submit">
+                <button type="submit" class="btn-primary" id="submitBtn">
+                  Send Message
+                </button>
+                <p class="form-note">We typically reply within a few hours.</p>
+              </div>
+
+              <div class="form-success" id="formSuccess" role="alert">
+                🌸 &nbsp;Thank you! Your message has been sent. We'll be in touch soon.
+              </div>
+            </form>
+          </div>
+
+          <!-- SIDE QUICK INFO -->
+          <aside aria-label="Quick contact information">
+            <div style="background: var(--color-cream); border-radius: var(--radius-lg); padding: 36px; border: 2px solid var(--color-cream-dark);">
+
+              <h3 style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--color-brown); margin-bottom: 24px;">Prefer something faster?</h3>
+
+              <a href="https://wa.me/923422953399"
+                 target="_blank" rel="noopener"
+                 style="display: flex; align-items: center; gap: 14px; background: #25D366; border-radius: var(--radius-md); padding: 16px 20px; margin-bottom: 12px; transition: var(--transition); text-decoration: none;">
+                <span style="font-size: 1.6rem;">💬</span>
+                <div>
+                  <p style="font-weight: 700; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 2px;">WhatsApp</p>
+                  <p style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: #fff;">0342 2953399</p>
+                </div>
+              </a>
+
+              <a href="https://wa.me/923705998180"
+                 target="_blank" rel="noopener"
+                 style="display: flex; align-items: center; gap: 14px; background: #25D366; border-radius: var(--radius-md); padding: 16px 20px; margin-bottom: 28px; transition: var(--transition); text-decoration: none;">
+                <span style="font-size: 1.6rem;">💬</span>
+                <div>
+                  <p style="font-weight: 700; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 2px;">WhatsApp</p>
+                  <p style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: #fff;">0370 5998180</p>
+                </div>
+              </a>
+
+              <div style="border-top: 1px solid var(--color-cream-dark); padding-top: 24px;">
+                <p style="font-weight: 700; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-brown); opacity: 0.5; margin-bottom: 12px;">Follow Along</p>
+                <a href="https://www.instagram.com/cafebloom7" target="_blank" rel="noopener"
+                   style="display: flex; align-items: center; gap: 12px; color: var(--color-brown); font-weight: 700; font-size: 0.95rem;">
+                  <span style="font-size: 1.4rem;">📸</span>
+                  @cafebloom7
+                </a>
+              </div>
+
+              <div style="border-top: 1px solid var(--color-cream-dark); padding-top: 24px; margin-top: 24px;">
+                <p style="font-weight: 700; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-brown); opacity: 0.5; margin-bottom: 12px;">Opening Hours</p>
+                <p style="font-family: var(--font-display); font-size: 1.05rem; color: var(--color-brown);">Mon – Sun</p>
+                <p style="font-size: 1.1rem; font-weight: 700; color: var(--color-primary); margin-top: 2px;">12:00 PM – 12:00 AM</p>
+              </div>
+
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="contact-about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="contact-about__inner">
+
+          <div class="contact-about__text-block">
+            <span class="contact-about__tag">Our Story</span>
+            <h2 class="contact-about__title" id="about-heading">About Café Bloom</h2>
+            <p class="contact-about__text">
+              Café Bloom was born from a simple belief — that every day deserves a beautiful beginning. Nestled in the heart of Hazara Town, Quetta, we've built a space where hand-crafted coffee, bold flavours, and warm hospitality come together.
+            </p>
+            <p class="contact-about__text">
+              From our wood-fired pizzas to our signature cold drinks, every item on our menu is made with care and a love for the craft. We're not just a café — we're a corner of Quetta where moments bloom.
+            </p>
+            <p class="contact-about__text">
+              Whether you're here for a quiet morning coffee, a family meal, or a special evening out — you belong here.
+            </p>
+            <a href="index.html" class="btn-outline-green" style="margin-top: 8px;">Explore the Home</a>
+          </div>
+
+          <div class="contact-about__visual" aria-hidden="true">
+            <img
+              src="assets/images/logo.jpg"
+              alt=""
+              class="contact-about__visual-logo"
+              loading="lazy"
+            />
+            <p class="contact-about__visual-tagline">let your day bloom</p>
+            <div class="contact-about__stats">
+              <div class="contact-about__stat">
+                <p class="contact-about__stat-num">4+</p>
+                <p class="contact-about__stat-label">Years Open</p>
+              </div>
+              <div class="contact-about__stat">
+                <p class="contact-about__stat-num">50+</p>
+                <p class="contact-about__stat-label">Menu Items</p>
+              </div>
+              <div class="contact-about__stat">
+                <p class="contact-about__stat-num">❤️</p>
+                <p class="contact-about__stat-label">Made With Love</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LOCATION SECTION ===== -->
+    <section class="contact-location" id="location" aria-labelledby="location-heading">
+      <div class="container">
+        <div class="contact-location__inner">
+
+          <div class="location-info">
+            <span class="location-info__tag">Find Us</span>
+            <h2 class="location-info__title" id="location-heading">Visit Café Bloom in Quetta</h2>
+
+            <div class="location-detail">
+              <div class="location-detail__icon" aria-hidden="true">📍</div>
+              <div>
+                <p class="location-detail__label">Address</p>
+                <p class="location-detail__value">Kirani Rd, Shoukat Stop,<br />Hazara Town, Quetta, Pakistan</p>
+              </div>
+            </div>
+
+            <div class="location-detail">
+              <div class="location-detail__icon" aria-hidden="true">📱</div>
+              <div>
+                <p class="location-detail__label">Phone / WhatsApp</p>
+                <p class="location-detail__value">
+                  <a href="https://wa.me/923422953399">0342 2953399</a><br />
+                  <a href="https://wa.me/923705998180">0370 5998180</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="location-detail">
+              <div class="location-detail__icon" aria-hidden="true">🕐</div>
+              <div>
+                <p class="location-detail__label">Opening Hours</p>
+                <p class="location-detail__value">Monday – Sunday<br /><strong>12:00 PM to 12:00 AM</strong></p>
+              </div>
+            </div>
+
+            <div class="location-detail">
+              <div class="location-detail__icon" aria-hidden="true">📸</div>
+              <div>
+                <p class="location-detail__label">Instagram</p>
+                <p class="location-detail__value">
+                  <a href="https://www.instagram.com/cafebloom7" target="_blank" rel="noopener">@cafebloom7</a>
+                </p>
+              </div>
+            </div>
+
+            <a href="https://maps.app.goo.gl/Kwg6D73yTNgVVbVa8" target="_blank" rel="noopener" class="btn-primary" style="margin-top: 8px; width: fit-content;">
+              📍 &nbsp;Open in Google Maps
+            </a>
+          </div>
+
+          <!-- MAP EMBED -->
+          <div class="location-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3375.0!2d67.0!3d30.18!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDEwJzQ4LjAiTiA2N8KwMDAnMDAuMCJF!5e0!3m2!1sen!2spk!4v1700000000000!5m2!1sen!2spk"
+              width="100%"
+              height="420"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Café Bloom location on Google Maps"
+            ></iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHATSAPP STRIP ===== -->
+    <section class="whatsapp-strip" aria-label="Order on WhatsApp">
+      <div class="container">
+        <p class="whatsapp-strip__text">Skip the queue — order directly on WhatsApp 🌸</p>
+        <a href="https://wa.me/923422953399" class="btn-whatsapp" target="_blank" rel="noopener">
+          <span>💬</span> Order Now on WhatsApp
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="assets/images/logo.jpg" alt="Café Bloom logo" width="52" height="52" loading="lazy" />
+          <p class="footer__tagline">let your day bloom</p>
+          <p>A warm corner in Hazara Town where every cup, every bite, and every moment is crafted with love.</p>
+          <a href="https://www.instagram.com/cafebloom7" class="footer__instagram" target="_blank" rel="noopener">&#9670; @cafebloom7</a>
+        </div>
+        <div class="footer__nav">
+          <h3 class="footer__heading">Navigate</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="events.html">Announcements</a></li>
+            <li><a href="contact.html">Bookings</a></li>
+          </ul>
+        </div>
+        <div class="footer__menu-links">
+          <h3 class="footer__heading">Menu</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="menu.html">Coffee</a></li>
+            <li><a href="menu.html">Drinks</a></li>
+            <li><a href="menu.html">Pizza</a></li>
+            <li><a href="menu.html">Burgers</a></li>
+            <li><a href="menu.html">Pasta</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact-info">
+          <h3 class="footer__heading">Find Us</h3>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">📍</span>
+            <span>Kirani Rd, Shoukat Stop, Hazara Town, Quetta</span>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">📱</span>
+            <span>0342 2953399 / 0370599818</span>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">🕐</span>
+            <span>Mon – Sun &nbsp;|&nbsp; 12pm – 12am</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__floral" aria-hidden="true">
+        <svg width="400" height="60" viewBox="0 0 400 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="30" x2="160" y2="30" stroke="#F5F0E8" stroke-width="1"/>
+          <g transform="translate(200, 30)">
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(60)"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(120)"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(180)"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(240)"/>
+            <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#F5F0E8" transform="rotate(300)"/>
+            <circle cx="0" cy="0" r="6" fill="#C8102E"/>
+          </g>
+          <line x1="240" y1="30" x2="400" y2="30" stroke="#F5F0E8" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 Café Bloom. All rights reserved.</p>
+        <p class="footer__copyright">Crafted with love in Quetta 🌸</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+
+  <!-- ===== CONTACT FORM JS ===== -->
+  <script defer>
+  (function() {
+    'use strict';
+
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('formSuccess');
+    const submitBtn = document.getElementById('submitBtn');
+
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const firstName = form.firstName.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+
+      if (!firstName || !email || !message) {
+        // Simple inline validation — highlight empty required fields
+        [form.firstName, form.email, form.message].forEach(field => {
+          if (!field.value.trim()) {
+            field.style.borderColor = 'var(--color-primary)';
+            field.addEventListener('input', () => {
+              field.style.borderColor = '';
+            }, { once: true });
+          }
+        });
+        return;
+      }
+
+      // Simulate send — show success state
+      submitBtn.textContent = 'Sending…';
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.7';
+
+      setTimeout(() => {
+        form.reset();
+        successMsg.style.display = 'block';
+        submitBtn.textContent = 'Send Message';
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '';
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 1200);
+    });
+  })();
+  </script>
+
+</body>
+</html>
