@@ -724,7 +724,6 @@ button {
 
 .testimonial-card__text {
   font-family: var(--font-display);
-  font-style: italic;
   font-size: 1.05rem;
   color: var(--color-brown);
   opacity: 0.8;
