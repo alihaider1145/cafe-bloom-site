@@ -231,6 +231,10 @@ button {
   padding-bottom: 4px;
 }
 
+.nav--light a {
+  color: var(--color-cream);
+}
+
 .nav__links a::after {
   content: '';
   position: absolute;
