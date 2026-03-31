@@ -345,6 +345,11 @@ button {
   padding: var(--spacing-section) 0;
 }
 
+/* Illustration always goes to the right column */
+.hero__illustration {
+  order: 2;
+}
+
 .hero__label {
   font-family: var(--font-accent);
   font-size: 1.2rem;
@@ -354,12 +359,12 @@ button {
 }
 
 .hero__title {
-  /* font-family: var(--font-display);
+  font-family: var(--font-display);
   font-size: clamp(3rem, 5vw, 5rem);
-  font-weight: 100;
+  font-weight: 900;
   line-height: 1.05;
-  color: var(--color-brown); */
-  text-align: center;
+  color: var(--color-brown);
+  text-align: left;
 }
 
 .hero__subtitle {
@@ -379,6 +384,7 @@ button {
 }
 
 .hero__illustration {
+  order: 2;
   position: relative;
   display: flex;
   align-items: center;
@@ -939,6 +945,10 @@ button {
 
   .hero__illustration {
     order: -1;
+  }
+
+  .hero__title {
+    text-align: center;
   }
 
   .hero__illustration svg {
@@ -1936,6 +1946,84 @@ button {
   }
 }
 
+/* ===== CONTACT SIDEBAR ===== */
+.contact-sidebar {
+  background: var(--color-cream);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  border: 2px solid var(--color-cream-dark);
+}
+
+.contact-sidebar__heading {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-brown);
+  margin-bottom: 24px;
+}
+
+.contact-sidebar__divider {
+  border: none;
+  border-top: 1px solid var(--color-cream-dark);
+  margin: 24px 0;
+}
+
+.contact-sidebar__label {
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-brown);
+  opacity: 0.5;
+  margin-bottom: 12px;
+}
+
+.contact-sidebar__hours-day {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--color-brown);
+}
+
+.contact-sidebar__hours-time {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-top: 2px;
+}
+
+.contact-sidebar__ig-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-brown);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.contact-sidebar__ig-link:hover {
+  color: var(--color-primary);
+}
+
+.contact-sidebar__ig-icon {
+  font-size: 1.4rem;
+}
+
+/* ===== FOOTER INSTAGRAM LINK ===== */
+.footer__instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  color: rgba(245, 240, 232, 0.6);
+  margin-top: 12px;
+  transition: var(--transition);
+}
+
+.footer__instagram:hover {
+  color: var(--color-cream);
+}
+
 
 /* ===================================================
    EVENTS PAGE STYLES
@@ -1978,7 +2066,7 @@ button {
   display: inline-block;
   font-family: var(--font-accent);
   font-size: 1.2rem;
-  color: var(--color-green-light);
+  color: rgba(245, 240, 232, 0.75);
   margin-bottom: 16px;
 }
 
