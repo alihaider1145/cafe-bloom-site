@@ -94,4 +94,19 @@
     });
   });
 
+  // Intersection Observer for scroll-triggered item animations in the Why Us section
+  const items = document.querySelectorAll('.why-us__item');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('is-visible');
+        }, i * 150);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+ 
+  items.forEach(item => observer.observe(item));
+
 })();

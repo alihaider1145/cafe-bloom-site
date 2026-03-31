@@ -17,7 +17,7 @@
     <div class="container">
       <div class="nav__inner">
         <a href="index.html" class="nav__logo" aria-label="Café Bloom Home">
-          <img src="assets/images/logo.jpg" alt="Café Bloom logo" width="52" height="52" />
+          <img src="assets/images/logo.jpg" alt="Café Bloom logo" width="52" height="52" class="img-logo"/>
         </a>
         <ul class="nav__links" role="list">
           <li><a href="index.html" aria-current="page">Home</a></li>
@@ -160,13 +160,6 @@
     <section class="featured" aria-labelledby="featured-title">
       <div class="container">
         <div class="featured__inner">
-          <div class="featured__left">
-            <p class="featured__eyebrow">Featured Malika Bites</p>
-            <h2 class="featured__title" id="featured-title">Little Bites.<br />Big Moments.</h2>
-            <p class="featured__subtitle">Our most-loved bites, handpicked from the kitchen. Each dish tells a story — let yours begin here.</p>
-            <a href="menu.html" class="btn-outline-green">View All Menu</a>
-          </div>
-
           <div class="featured__cards">
 
             <article class="featured-card">
@@ -200,41 +193,99 @@
             </article>
 
           </div>
+
+          <div class="featured__right">
+            <p class="featured__eyebrow">Featured Malika Bites</p>
+            <h2 class="featured__title" id="featured-title">Little Bites.<br />Big Moments.</h2>
+            <p class="featured__subtitle">Our most-loved bites, handpicked from the kitchen. Each dish tells a story — let yours begin here.</p>
+            <a href="menu.html" class="btn-outline-green">View All Menu</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== ABOUT SECTION ===== -->
-    <section class="contact-about" aria-labelledby="about-heading">
-      <div class="contact-about__container container">
-
-        <div class="contact-about__text-block">
-          <span class="contact-about__tag">Our Story</span>
-          <h2 class="contact-about__title" id="about-heading">About Café Bloom</h2>
-          <p class="contact-about__text">
-            Café Bloom was born from a simple belief — that every day deserves a beautiful moment. Nestled in the heart of Hazara Town, Quetta, we've built a space where hand-crafted coffee, bold flavours, and warm hospitality come together.
-          </p>
-          <p class="contact-about__text">
-            Whether you're here for a quiet morning coffee, a family meal, or a special evening out — you belong here.
-          </p>
+        <!-- ===== WHY US ===== -->
+    <section class="why-us" aria-labelledby="why-us-heading">
+      <div class="why-us__container">
+    
+        <!-- Decorative SVG illustrations -->
+        <div class="why-us__deco why-us__deco--cup" aria-hidden="true">
+          <svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <!-- Coffee cup -->
+            <ellipse cx="90" cy="60" rx="55" ry="18" stroke="#C8102E" stroke-width="3"/>
+            <path d="M35 60 Q30 130 90 140 Q150 130 145 60" stroke="#C8102E" stroke-width="3"/>
+            <path d="M145 75 Q175 80 170 110 Q165 130 145 115" stroke="#C8102E" stroke-width="3"/>
+            <ellipse cx="90" cy="148" rx="40" ry="8" stroke="#C8102E" stroke-width="2"/>
+            <!-- Steam -->
+            <path d="M70 40 Q65 25 72 15 Q78 5 73 -5" stroke="#C8102E" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M90 38 Q85 22 92 12 Q98 2 93 -8" stroke="#C8102E" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M110 40 Q105 25 112 15 Q118 5 113 -5" stroke="#C8102E" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
         </div>
-
-        <div class="contact-about__video">
-          <iframe 
-            width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/3YU9RCeVrnk?si=1ukHp0S6KB311xxX" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-          </iframe>
+    
+        <div class="why-us__deco why-us__deco--leaf" aria-hidden="true">
+          <svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <!-- Leaf / flower -->
+            <circle cx="70" cy="70" r="28" stroke="#4A5C3F" stroke-width="3"/>
+            <path d="M70 70 Q50 30 70 10 Q90 30 70 70" stroke="#4A5C3F" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M70 70 Q110 50 130 70 Q110 90 70 70" stroke="#4A5C3F" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M70 70 Q50 110 70 130 Q90 110 70 70" stroke="#4A5C3F" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M70 70 Q30 50 10 70 Q30 90 70 70" stroke="#4A5C3F" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="70" cy="70" r="8" stroke="#4A5C3F" stroke-width="2"/>
+          </svg>
         </div>
+    
+        <div class="why-us__deco why-us__deco--arrow" aria-hidden="true">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <line x1="10" y1="90" x2="90" y2="10" class="arrow-deco"/>
+            <polyline points="45,10 90,10 90,55" class="arrow-deco"/>
+          </svg>
+        </div>
+    
+        <!-- Header -->
+        <header class="why-us__header">
+          <span class="why-us__tagline">reasons to love us</span>
+          <h2 class="why-us__title" id="why-us-heading">Why <span>Us?</span></h2>
+          <div class="why-us__divider" aria-hidden="true">
+            <span class="why-us__divider-icon">✦</span>
+          </div>
+        </header>
+    
+        <!-- Items -->
+        <ol class="why-us__items" aria-label="Reasons to choose Café Bloom">
+    
+          <li class="why-us__item" role="listitem">
+            <div class="why-us__number" aria-hidden="true">01</div>
+            <div class="why-us__content">
+              <span class="why-us__item-tag">from farm to cup</span>
+              <h3 class="why-us__item-title">Freshness &amp; Quality</h3>
+              <p class="why-us__item-text">Every ingredient at Café Bloom is sourced directly from trusted local farms and artisan roasters. We believe great coffee and food start long before they reach your table — with honest ingredients and careful hands.</p>
+            </div>
+          </li>
+    
+          <li class="why-us__item" role="listitem">
+            <div class="why-us__number" aria-hidden="true">02</div>
+            <div class="why-us__content">
+              <span class="why-us__item-tag">for every craving</span>
+              <h3 class="why-us__item-title">A Menu for Everyone</h3>
+              <p class="why-us__item-text">From hearty all-day breakfasts and specialty pour-overs to light bites and seasonal specials — our menu is crafted to delight every guest, every visit. Vegan, gluten-free, and seasonal options always available.</p>
+            </div>
+          </li>
+    
+          <li class="why-us__item" role="listitem">
+            <div class="why-us__number" aria-hidden="true">03</div>
+            <div class="why-us__content">
+              <span class="why-us__item-tag">your home away from home</span>
+              <h3 class="why-us__item-title">Warm Atmosphere</h3>
+              <p class="why-us__item-text">Café Bloom is more than a coffee shop — it's a place where mornings begin slowly, conversations linger, and every corner is designed for comfort. Whether you're here to work, catch up, or simply breathe, we've saved you a seat.</p>
+            </div>
+          </li>
+    
+        </ol>
       </div>
     </section>
-
-    <div class="contact-about__visual" aria-hidden="true">
+    
+    <!-- <div class="contact-about__visual" aria-hidden="true">
         <img
           src="assets/images/logo.jpg"
           alt=""
@@ -256,7 +307,7 @@
             <p class="contact-about__stat-label">Love</p>
           </div>
         </div>
-      </div>
+      </div> -->
 
     <!-- ===== ANNOUNCEMENTS ===== -->
     <section class="announcements" aria-labelledby="announcements-title">
@@ -365,11 +416,17 @@
       <div class="footer__inner">
 
         <div class="footer__brand">
-          <img src="assets/images/logo.jpg" alt="Café Bloom logo" width="52" height="52" loading="lazy" />
+          <img src="assets/images/logo.jpg" alt="Café Bloom logo" width="52" height="52" loading="lazy" class="img-logo"/>
           <p class="footer__tagline">let your day bloom</p>
           <p>A warm corner in Hazara Town where every cup, every bite, and every moment is crafted with love.</p>
-          <a href="https://www.instagram.com/cafebloom7" class="footer__instagram" target="_blank" rel="noopener">
-            &#9670; @cafebloom7
+          <a href="https://www.instagram.com/cafebloom7" class="footer__social-link" target="_blank" rel="noopener">
+            <img src="./assets/images/instagram.svg" alt="Instagram">
+          </a>
+          <a href="https://www.tiktok.com/@caf.bloom?_r=1&_t=ZS-93JPcuxWNKZ" class="footer__social-link" target="_blank" rel="noopener">
+            <img src="./assets/images/tiktok.svg" alt="TikTok">
+          </a>
+          <a href="https://www.facebook.com/share/18GyBNtfqT/" class="footer__social-link" target="_blank" rel="noopener">
+            <img src="./assets/images/facebook.svg" alt="Facebook">
           </a>
         </div>
 
