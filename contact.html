@@ -68,7 +68,7 @@
           <!-- FORM BLOCK -->
           <div class="contact-form-block">
             <h2 class="contact-form-block__heading" id="form-heading">Send Us a Message</h2>
-            <p class="contact-form-block__sub">Fill in the form below and we'll get back to you as soon as possible. For faster responses, reach us on WhatsApp.</p>
+            <p class="contact-form-block__sub">Fill in the form and hit send — we'll open WhatsApp with your message ready to go. Name and phone are required so we can get back to you.</p>
 
             <form class="contact-form" id="contactForm" novalidate>
               <div class="form-row">
@@ -98,13 +98,14 @@
 
               <div class="form-row">
                 <div class="form-group">
-                  <label for="username">Username / Handle</label>
+                  <label for="phone">Phone / WhatsApp</label>
                   <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    placeholder="@yourhandle"
-                    autocomplete="username"
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="e.g. 0312 3456789"
+                    autocomplete="tel"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -115,7 +116,6 @@
                     name="email"
                     placeholder="you@email.com"
                     autocomplete="email"
-                    required
                   />
                 </div>
               </div>
@@ -132,59 +132,33 @@
 
               <div class="form-submit">
                 <button type="submit" class="btn-primary" id="submitBtn">
-                  Send Message
+                  💬 &nbsp;Send on WhatsApp
                 </button>
-                <p class="form-note">We typically reply within a few hours.</p>
+                <p class="form-note">Opens WhatsApp with your message pre-filled.</p>
               </div>
 
-              <div class="form-success" id="formSuccess" role="alert">
-                🌸 &nbsp;Thank you! Your message has been sent. We'll be in touch soon.
-              </div>
             </form>
           </div>
 
           <!-- SIDE QUICK INFO -->
-          <aside aria-label="Quick contact information">
-            <div style="background: var(--color-cream); border-radius: var(--radius-lg); padding: 36px; border: 2px solid var(--color-cream-dark);">
+          <aside class="contact-sidebar" aria-label="Quick contact information">
 
-              <h3 style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--color-brown); margin-bottom: 24px;">Prefer something faster?</h3>
+            <h3 class="contact-sidebar__heading">Quick Info</h3>
 
-              <a href="https://wa.me/923422953399"
-                 target="_blank" rel="noopener"
-                 style="display: flex; align-items: center; gap: 14px; background: #25D366; border-radius: var(--radius-md); padding: 16px 20px; margin-bottom: 12px; transition: var(--transition); text-decoration: none;">
-                <span style="font-size: 1.6rem;">💬</span>
-                <div>
-                  <p style="font-weight: 700; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 2px;">WhatsApp</p>
-                  <p style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: #fff;">0342 2953399</p>
-                </div>
-              </a>
+            <hr class="contact-sidebar__divider">
 
-              <a href="https://wa.me/923705998180"
-                 target="_blank" rel="noopener"
-                 style="display: flex; align-items: center; gap: 14px; background: #25D366; border-radius: var(--radius-md); padding: 16px 20px; margin-bottom: 28px; transition: var(--transition); text-decoration: none;">
-                <span style="font-size: 1.6rem;">💬</span>
-                <div>
-                  <p style="font-weight: 700; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 2px;">WhatsApp</p>
-                  <p style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: #fff;">0370 5998180</p>
-                </div>
-              </a>
+            <p class="contact-sidebar__label">Opening Hours</p>
+            <p class="contact-sidebar__hours-day">Mon – Sun</p>
+            <p class="contact-sidebar__hours-time">12:00 PM – 12:00 AM</p>
 
-              <div style="border-top: 1px solid var(--color-cream-dark); padding-top: 24px;">
-                <p style="font-weight: 700; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-brown); opacity: 0.5; margin-bottom: 12px;">Follow Along</p>
-                <a href="https://www.instagram.com/cafebloom7" target="_blank" rel="noopener"
-                   style="display: flex; align-items: center; gap: 12px; color: var(--color-brown); font-weight: 700; font-size: 0.95rem;">
-                  <span style="font-size: 1.4rem;">📸</span>
-                  @cafebloom7
-                </a>
-              </div>
+            <hr class="contact-sidebar__divider">
 
-              <div style="border-top: 1px solid var(--color-cream-dark); padding-top: 24px; margin-top: 24px;">
-                <p style="font-weight: 700; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-brown); opacity: 0.5; margin-bottom: 12px;">Opening Hours</p>
-                <p style="font-family: var(--font-display); font-size: 1.05rem; color: var(--color-brown);">Mon – Sun</p>
-                <p style="font-size: 1.1rem; font-weight: 700; color: var(--color-primary); margin-top: 2px;">12:00 PM – 12:00 AM</p>
-              </div>
+            <p class="contact-sidebar__label">Follow Along</p>
+            <a href="https://www.instagram.com/cafebloom7" target="_blank" rel="noopener" class="contact-sidebar__ig-link">
+              <span class="contact-sidebar__ig-icon">📸</span>
+              @cafebloom7
+            </a>
 
-            </div>
           </aside>
 
         </div>
@@ -277,10 +251,18 @@
     <div class="container">
       <div class="footer__inner">
         <div class="footer__brand">
-          <img src="assets/images/logo.jpg" alt="Café Bloom logo" width="52" height="52" loading="lazy" />
+          <img src="assets/images/logo.jpg" alt="Café Bloom logo" width="52" height="52" loading="lazy" class="img-logo"/>
           <p class="footer__tagline">let your day bloom</p>
           <p>A warm corner in Hazara Town where every cup, every bite, and every moment is crafted with love.</p>
-          <a href="https://www.instagram.com/cafebloom7" class="footer__instagram" target="_blank" rel="noopener">&#9670; @cafebloom7</a>
+          <a href="https://www.instagram.com/cafebloom7" class="footer__social-link" target="_blank" rel="noopener">
+            <img src="./assets/images/instagram.svg" alt="Instagram">
+          </a>
+          <a href="https://www.tiktok.com/@caf.bloom?_r=1&_t=ZS-93JPcuxWNKZ" class="footer__social-link" target="_blank" rel="noopener">
+            <img src="./assets/images/tiktok.svg" alt="TikTok">
+          </a>
+          <a href="https://www.facebook.com/share/18GyBNtfqT/" class="footer__social-link" target="_blank" rel="noopener">
+            <img src="./assets/images/facebook.svg" alt="Facebook">
+          </a>
         </div>
         <div class="footer__nav">
           <h3 class="footer__heading">Navigate</h3>
@@ -309,11 +291,17 @@
           </div>
           <div class="footer__contact-item">
             <span class="footer__contact-icon">📱</span>
-            <span>0342 2953399 / 0370599818</span>
+            <span>0342 2953399 / 03705998180</span>
           </div>
           <div class="footer__contact-item">
             <span class="footer__contact-icon">🕐</span>
             <span>Mon – Sun &nbsp;|&nbsp; 12pm – 12am</span>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">💬</span>
+            <a href="https://wa.me/923422953399" target="_blank" rel="noopener" style="color: rgba(245,240,232,0.65);">
+              Order on WhatsApp
+            </a>
           </div>
         </div>
       </div>
@@ -347,44 +335,46 @@
     'use strict';
 
     const form = document.getElementById('contactForm');
-    const successMsg = document.getElementById('formSuccess');
     const submitBtn = document.getElementById('submitBtn');
 
     if (!form) return;
+
+    const WA_NUMBER = '923422953399';
+
+    const markInvalid = (field) => {
+      field.style.borderColor = 'var(--color-primary)';
+      field.addEventListener('input', () => {
+        field.style.borderColor = '';
+      }, { once: true });
+    };
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
       const firstName = form.firstName.value.trim();
-      const email = form.email.value.trim();
-      const message = form.message.value.trim();
+      const lastName  = form.lastName.value.trim();
+      const phone     = form.phone.value.trim();
+      const message   = form.message.value.trim();
 
-      if (!firstName || !email || !message) {
-        // Simple inline validation — highlight empty required fields
-        [form.firstName, form.email, form.message].forEach(field => {
-          if (!field.value.trim()) {
-            field.style.borderColor = 'var(--color-primary)';
-            field.addEventListener('input', () => {
-              field.style.borderColor = '';
-            }, { once: true });
-          }
-        });
-        return;
-      }
+      let valid = true;
+      if (!firstName) { markInvalid(form.firstName); valid = false; }
+      if (!phone)     { markInvalid(form.phone);     valid = false; }
+      if (!message)   { markInvalid(form.message);   valid = false; }
+      if (!valid) return;
 
-      // Simulate send — show success state
-      submitBtn.textContent = 'Sending…';
+      const fullName = lastName ? `${firstName} ${lastName}` : firstName;
+      const text = `Hi Café Bloom! 🌸\n\nName: ${fullName}\nPhone: ${phone}\n\nMessage:\n${message}`;
+
+      submitBtn.textContent = 'Opening WhatsApp…';
       submitBtn.disabled = true;
-      submitBtn.style.opacity = '0.7';
+
+      window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
 
       setTimeout(() => {
         form.reset();
-        successMsg.style.display = 'block';
-        submitBtn.textContent = 'Send Message';
+        submitBtn.innerHTML = '💬 &nbsp;Send on WhatsApp';
         submitBtn.disabled = false;
-        submitBtn.style.opacity = '';
-        successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 1200);
+      }, 1500);
     });
   })();
   </script>
