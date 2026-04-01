@@ -59,7 +59,6 @@
         </div>
       </div>
     </section>
-
     <!-- ===== FORM + SIDE INFO ===== -->
     <section class="contact-body" aria-labelledby="form-heading">
       <div class="container">
@@ -67,74 +66,89 @@
 
           <!-- FORM BLOCK -->
           <div class="contact-form-block">
-            <h2 class="contact-form-block__heading" id="form-heading">Send Us a Message</h2>
-            <p class="contact-form-block__sub">Fill in the form and hit send — we'll open WhatsApp with your message ready to go. Name and phone are required so we can get back to you.</p>
+            <h2 class="contact-form-block__heading" id="form-heading">Get In Touch</h2>
+            <p class="contact-form-block__sub">Send us a message or build your order — we'll open WhatsApp with everything ready to go. Name and phone are required.</p>
 
             <form class="contact-form" id="contactForm" novalidate>
-              <div class="form-row">
+
+              <!-- ── Main tabs ── -->
+              <div class="form-tabs" role="tablist" aria-label="Contact method">
+                <button type="button" class="form-tab-btn active" data-form-tab="message" role="tab" aria-selected="true">💬 Message Us</button>
+                <button type="button" class="form-tab-btn" data-form-tab="order" role="tab" aria-selected="false">🛒 Build Your Order</button>
+              </div>
+
+              <!-- ── Message panel ── -->
+              <div class="form-tab-panel active" data-form-panel="message">
+                <p class="message-panel__intro">Write us anything — a reservation, a question, a special request. We'll get back to you on WhatsApp.</p>
                 <div class="form-group">
-                  <label for="firstName">First Name</label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    placeholder="e.g. Ali"
-                    autocomplete="given-name"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="lastName">Last Name</label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    placeholder="e.g. Raza"
-                    autocomplete="family-name"
-                    required
-                  />
+                  <label for="message">Your Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell us about your reservation, order, or anything else on your mind..."
+                  ></textarea>
                 </div>
               </div>
 
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="phone">Phone / WhatsApp</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="e.g. 0312 3456789"
-                    autocomplete="tel"
-                    required
-                  />
+              <!-- ── Order panel ── -->
+              <div class="form-tab-panel" data-form-panel="order">
+
+                <div class="order-cat-tabs" role="tablist" aria-label="Menu category">
+                  <button type="button" class="order-cat-btn active" data-order-tab="drinks">☕ Drinks</button>
+                  <button type="button" class="order-cat-btn" data-order-tab="food">🍝 Food</button>
+                  <button type="button" class="order-cat-btn" data-order-tab="pizza">🍕 Pizza</button>
                 </div>
-                <div class="form-group">
-                  <label for="email">Email Address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="you@email.com"
-                    autocomplete="email"
-                  />
+
+                <div class="order-cat-panel active" data-order-panel="drinks"></div>
+                <div class="order-cat-panel"        data-order-panel="food"></div>
+                <div class="order-cat-panel"        data-order-panel="pizza"></div>
+
+                <div class="order-summary" id="orderSummary" aria-live="polite">
+                  <div class="order-summary__empty" id="orderEmpty">No items yet — pick something above 🌸</div>
+                  <ul class="order-summary__list" id="orderList" hidden></ul>
+                  <div class="order-summary__footer" id="orderFooter" hidden>
+                    <span class="order-summary__total">Total: <strong id="orderTotal">Rs. 0</strong></span>
+                    <button type="button" class="order-summary__clear" id="clearOrder">Clear all</button>
+                  </div>
                 </div>
+
+                <div class="order-note form-group">
+                  <label for="orderNote">Additional Notes <span class="form-optional">(optional)</span></label>
+                  <textarea id="orderNote" name="orderNote" placeholder="Special requests, allergies, delivery instructions..."></textarea>
+                </div>
+
               </div>
 
-              <div class="form-group">
-                <label for="message">Your Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Tell us about your reservation, order, or anything else on your mind..."
-                  required
-                ></textarea>
-              </div>
+              <!-- ── Shared footer: always visible ── -->
+              <div class="form-shared">
+                <span class="form-shared__label">Your Details</span>
 
-              <div class="form-submit">
-                <button type="submit" class="btn-primary" id="submitBtn">
-                  💬 &nbsp;Send on WhatsApp
-                </button>
-                <p class="form-note">Opens WhatsApp with your message pre-filled.</p>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="e.g. Ali" autocomplete="given-name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName">Last Name (OPTIONAL)</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="e.g. Raza" autocomplete="family-name" />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="phone">Phone / WhatsApp</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g. 0312 3456789" autocomplete="tel" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email Address (OPTIONAL)</label>
+                    <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email" />
+                  </div>
+                </div>
+
+                <div class="form-submit">
+                  <button type="submit" class="btn-primary" id="submitBtn">💬 &nbsp;Send on WhatsApp</button>
+                  <p class="form-note">Opens WhatsApp with your message pre-filled.</p>
+                </div>
               </div>
 
             </form>
@@ -160,6 +174,7 @@
                 <span>@cafebloom7</span>
               </span>
             </a>
+
             <hr class="contact-sidebar__divider">
 
             <p class="contact-sidebar__label">Tik Tok</p>
@@ -169,6 +184,7 @@
                 <span>@caf.bloom</span>
               </span>
             </a>
+
             <hr class="contact-sidebar__divider">
 
             <p class="contact-sidebar__label">Facebook</p>
@@ -219,16 +235,6 @@
                 <p class="location-detail__value">Monday – Sunday<br /><strong>12:00 PM to 12:00 AM</strong></p>
               </div>
             </div>
-<!-- 
-            <div class="location-detail">
-              <div class="location-detail__icon" aria-hidden="true">📸</div>
-              <div>
-                <p class="location-detail__label">Instagram</p>
-                <p class="location-detail__value">
-                  <a href="https://www.instagram.com/cafebloom7" target="_blank" rel="noopener">@cafebloom7</a>
-                </p>
-              </div>
-            </div> -->
 
             <a href="https://maps.app.goo.gl/Kwg6D73yTNgVVbVa8" target="_blank" rel="noopener" class="btn-primary" style="margin-top: 8px; width: fit-content;">
               📍 &nbsp;Open in Google Maps
@@ -351,56 +357,329 @@
     <span class="whatsapp-fab__tooltip">Order on WhatsApp</span>
   </a>
   <script src="assets/js/main.js" defer></script>
+<!-- ===== ORDER BUILDER JS ===== -->
+<script defer>
+(function() {
+  'use strict';
 
-  <!-- ===== CONTACT FORM JS ===== -->
-  <script defer>
-  (function() {
-    'use strict';
+  const MENU = {
+    drinks: [
+      { id: 'espresso',    name: 'Espresso',            emoji: '☕', price: 250  },
+      { id: 'latte',       name: 'Café Latte',           emoji: '☕', price: 350  },
+      { id: 'cappuccino',  name: 'Cappuccino',           emoji: '☕', price: 350  },
+      { id: 'americano',   name: 'Americano',            emoji: '☕', price: 280  },
+      { id: 'mocha',       name: 'Mocha',                emoji: '☕', price: 380  },
+      { id: 'hot-choc',    name: 'Hot Chocolate',        emoji: '🍫', price: 320  },
+      { id: 'cold-coffee', name: 'Cold Coffee',          emoji: '🥤', price: 350  },
+      { id: 'straw-shake', name: 'Strawberry Shake',     emoji: '🍓', price: 400  },
+      { id: 'choc-shake',  name: 'Chocolate Shake',      emoji: '🍫', price: 420  },
+      { id: 'mango',       name: 'Mango Cooler',         emoji: '🥭', price: 380  },
+      { id: 'mint-lem',    name: 'Mint Lemonade',        emoji: '🍋', price: 320  },
+      { id: 'bloom-cool',  name: 'Bloom Cooler',         emoji: '🌸', price: 450  },
+    ],
+    food: [
+      { id: 'mex-crunch-p', name: 'Mexican Crunch (Pasta)',    emoji: '🍝', price: 949  },
+      { id: 'penni-sp',     name: 'Penni Special',             emoji: '🍝', price: 849  },
+      { id: 'bloom-pasta',  name: 'Bloom Special (Pasta)',     emoji: '🌸', price: 949  },
+      { id: 'spice-blast',  name: 'Spice Blast',               emoji: '🔥', price: 649  },
+      { id: 'macron-sp',    name: 'Macron Special',            emoji: '🍝', price: 699  },
+      { id: 'malai-pasta',  name: 'Malai Special (Pasta)',     emoji: '🍝', price: 749  },
+      { id: 'chkn-patty',   name: 'Chicken Patty Burger',     emoji: '🍔', price: 499  },
+      { id: 'pizza-burger', name: 'Pizza Burger',              emoji: '🍕', price: 549  },
+      { id: 'zinger',       name: 'Zinger Burger',             emoji: '🍔', price: 599  },
+      { id: 'mex-double',   name: 'Mexican Double Crunch',     emoji: '🌮', price: 1099 },
+      { id: 'tower-sp',     name: 'Tower Special',             emoji: '🏰', price: 849  },
+      { id: 'beef-smash',   name: 'Beef Smashed',              emoji: '🥩', price: 799  },
+      { id: 'beef-double',  name: 'Beef Double',               emoji: '🥩', price: 1499 },
+      { id: 'mex-beef',     name: 'Mexican Beef',              emoji: '🌶️', price: 849  },
+      { id: 'nug-burger',   name: 'Nug Burger',                emoji: '🍗', price: 449  },
+      { id: 'nuggets-6',    name: 'Special Nuggets (6 Pcs)',   emoji: '🍗', price: 349  },
+      { id: 'nuggets-12',   name: 'Special Nuggets (12 Pcs)', emoji: '🍗', price: 549  },
+    ],
+    pizza: [
+      { id: 'tikka',     name: 'Tikka',               emoji: '🍕', prices: { S:449,  M:849,  L:1199, XL:1699, XXL:2199 } },
+      { id: 'fajita',    name: 'Fajita',              emoji: '🌮', prices: { S:449,  M:849,  L:1199, XL:1699, XXL:2199 } },
+      { id: 'malai',     name: 'Malai Boti',          emoji: '🍗', prices: { S:449,  M:849,  L:1199, XL:1699, XXL:2199 } },
+      { id: 'supreme',   name: 'Supreme',             emoji: '👑', prices: { S:449,  M:849,  L:1199, XL:1699, XXL:2199 } },
+      { id: 'silican',   name: 'Hot Silican',         emoji: '🔥', prices: { S:449,  M:849,  L:1199, XL:1699, XXL:2199 } },
+      { id: 'euro',      name: 'Classic Euro',        emoji: '🇮🇹', prices: { S:449,  M:849,  L:1199, XL:1699, XXL:2199 } },
+      { id: 'mex-360',   name: 'Mexican 360 Spices',  emoji: '🌶️', prices: { S:449,  M:849,  L:1199, XL:1699, XXL:2199 } },
+      { id: 'big-bite',  name: 'Big Bite',            emoji: '🍕', prices: { S:549,  M:949,  L:1499, XL:1999, XXL:2499 } },
+      { id: 'ny-crust',  name: 'NY Stuffed Crust',    emoji: '🗽', prices: { S:549,  M:949,  L:1499, XL:1999, XXL:2499 } },
+      { id: 'cb-sp',     name: 'Café Bloom Special',  emoji: '🌸', prices: { S:549,  M:949,  L:1499, XL:1999, XXL:2499 } },
+      { id: 'dbl-melt',  name: 'Double Melt Special', emoji: '🧀', prices: { S:549,  M:949,  L:1499, XL:1999, XXL:2499 } },
+      { id: 'keb-2ngt',  name: 'Kebab 2 Night',       emoji: '🌙', prices: { S:549,  M:949,  L:1499, XL:1999, XXL:2499 } },
+      { id: 'crown',     name: 'Crown Crust',         emoji: '👑', prices: { S:549,  M:949,  L:1499, XL:1999, XXL:2499 } },
+      { id: 'chsy-stf',  name: 'Cheesy Stuffed',      emoji: '🧀', prices: { S:549,  M:949,  L:1499, XL:1999, XXL:2499 } },
+      { id: 'keb-stf',   name: 'Kebab Stuffed',       emoji: '🥙', prices: { S:549,  M:949,  L:1499, XL:1999, XXL:2499 } },
+      { id: 'half-half', name: 'Half & Half',         emoji: '🍕', prices: { S:549,  M:949,  L:1499, XL:1999, XXL:2499 } },
+    ]
+  };
 
-    const form = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submitBtn');
+  const order = {};
 
-    if (!form) return;
+  /* ---- Render ---- */
+  const renderDrinksFood = (category) => {
+    const panel = document.querySelector(`[data-order-panel="${category}"]`);
+    if (!panel) return;
+    panel.innerHTML = MENU[category].map(item => `
+      <div class="order-item">
+        <span class="order-item__emoji" aria-hidden="true">${item.emoji}</span>
+        <span class="order-item__name">${item.name}</span>
+        <span class="order-item__price">Rs. ${item.price.toLocaleString()}</span>
+        <div class="order-item__controls">
+          <button type="button" class="order-item__btn order-item__btn--dec" data-id="${item.id}" aria-label="Remove ${item.name}">−</button>
+          <span class="order-item__qty" id="qty-${item.id}">0</span>
+          <button type="button" class="order-item__btn order-item__btn--inc" data-id="${item.id}" aria-label="Add ${item.name}">+</button>
+        </div>
+      </div>
+    `).join('');
+  };
 
-    const WA_NUMBER = '923422953399';
+  const renderPizza = () => {
+    const panel = document.querySelector('[data-order-panel="pizza"]');
+    if (!panel) return;
+    const sizes = ['S', 'M', 'L', 'XL', 'XXL'];
+    panel.innerHTML = MENU.pizza.map(item => `
+      <div class="order-item order-item--pizza">
+        <span class="order-item__emoji" aria-hidden="true">${item.emoji}</span>
+        <span class="order-item__name">${item.name}</span>
+        <select class="order-item__size-select" data-pizza-id="${item.id}" aria-label="Size for ${item.name}">
+          ${sizes.map(s => `<option value="${s}" data-price="${item.prices[s]}">${s} — Rs. ${item.prices[s].toLocaleString()}</option>`).join('')}
+        </select>
+        <button type="button" class="order-item__add-btn" data-pizza-id="${item.id}" aria-label="Add ${item.name}">+ Add</button>
+      </div>
+    `).join('');
+  };
 
-    const markInvalid = (field) => {
-      field.style.borderColor = 'var(--color-primary)';
-      field.addEventListener('input', () => {
-        field.style.borderColor = '';
-      }, { once: true });
-    };
+  /* ---- State ---- */
+  const addSimpleItem = (id, name, price, emoji) => {
+    if (order[id]) { order[id].qty++; } else { order[id] = { name, price, qty: 1, emoji }; }
+    const el = document.getElementById(`qty-${id}`);
+    if (el) el.textContent = order[id].qty;
+    updateSummary();
+  };
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
+  const removeSimpleItem = (id) => {
+    if (!order[id]) return;
+    order[id].qty--;
+    if (order[id].qty <= 0) delete order[id];
+    const el = document.getElementById(`qty-${id}`);
+    if (el) el.textContent = order[id]?.qty ?? 0;
+    updateSummary();
+  };
 
-      const firstName = form.firstName.value.trim();
-      const lastName  = form.lastName.value.trim();
-      const phone     = form.phone.value.trim();
-      const message   = form.message.value.trim();
+  const removeByKey = (key) => {
+    delete order[key];
+    const el = document.getElementById(`qty-${key}`);
+    if (el) el.textContent = 0;
+    updateSummary();
+  };
 
-      let valid = true;
-      if (!firstName) { markInvalid(form.firstName); valid = false; }
-      if (!phone)     { markInvalid(form.phone);     valid = false; }
-      if (!message)   { markInvalid(form.message);   valid = false; }
+  /* ---- Summary ---- */
+  const updateSummary = () => {
+    const list    = document.getElementById('orderList');
+    const empty   = document.getElementById('orderEmpty');
+    const footer  = document.getElementById('orderFooter');
+    const totalEl = document.getElementById('orderTotal');
+    if (!list) return;
+
+    const keys = Object.keys(order);
+    if (keys.length === 0) {
+      list.hidden = true; footer.hidden = true; empty.hidden = false;
+      return;
+    }
+
+    empty.hidden = true; list.hidden = false; footer.hidden = false;
+
+    let total = 0;
+    list.innerHTML = keys.map(key => {
+      const item = order[key];
+      const lineTotal = item.price * item.qty;
+      total += lineTotal;
+      return `<li class="order-summary__item">
+        <span>${item.emoji} ${item.name} × ${item.qty}</span>
+        <span>Rs. ${lineTotal.toLocaleString()}</span>
+        <button type="button" class="order-summary__remove" data-key="${key}" aria-label="Remove ${item.name}">×</button>
+      </li>`;
+    }).join('');
+
+    totalEl.textContent = `Rs. ${total.toLocaleString()}`;
+  };
+
+  /* ---- Event delegation: order items ---- */
+  document.querySelector('[data-form-panel="order"]')?.addEventListener('click', (e) => {
+    const inc      = e.target.closest('.order-item__btn--inc');
+    const dec      = e.target.closest('.order-item__btn--dec');
+    const addPizza = e.target.closest('.order-item__add-btn');
+
+    if (inc) {
+      const id = inc.dataset.id;
+      const item = [...MENU.drinks, ...MENU.food].find(i => i.id === id);
+      if (item) addSimpleItem(id, item.name, item.price, item.emoji);
+    }
+    if (dec) { removeSimpleItem(dec.dataset.id); }
+    if (addPizza) {
+      const pizzaId = addPizza.dataset.pizzaId;
+      const select  = document.querySelector(`select[data-pizza-id="${pizzaId}"]`);
+      const size    = select.value;
+      const price   = parseInt(select.options[select.selectedIndex].dataset.price);
+      const pizza   = MENU.pizza.find(p => p.id === pizzaId);
+      if (!pizza) return;
+
+      const key = `${pizzaId}-${size}`;
+      if (order[key]) { order[key].qty++; } else { order[key] = { name: `${pizza.name} (${size})`, price, qty: 1, emoji: pizza.emoji }; }
+      updateSummary();
+
+      addPizza.textContent = '✓ Added';
+      setTimeout(() => { addPizza.textContent = '+ Add'; }, 800);
+    }
+  });
+
+  /* ---- Event delegation: summary remove ---- */
+  document.getElementById('orderList')?.addEventListener('click', (e) => {
+    const btn = e.target.closest('.order-summary__remove');
+    if (btn) removeByKey(btn.dataset.key);
+  });
+
+  /* ---- Category sub-tab switching ---- */
+  document.querySelectorAll('.order-cat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.order-cat-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.order-cat-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelector(`[data-order-panel="${btn.dataset.orderTab}"]`)?.classList.add('active');
+    });
+  });
+
+  /* ---- Clear all ---- */
+  document.getElementById('clearOrder')?.addEventListener('click', () => {
+    Object.keys(order).forEach(k => delete order[k]);
+    document.querySelectorAll('.order-item__qty').forEach(el => (el.textContent = '0'));
+    updateSummary();
+  });
+
+  /* ---- Expose to form script ---- */
+  window.getOrderSummary = () => {
+    const keys = Object.keys(order);
+    if (keys.length === 0) return null;
+    let total = 0;
+    const lines = keys.map(key => {
+      const item = order[key];
+      const lineTotal = item.price * item.qty;
+      total += lineTotal;
+      return `  • ${item.name} × ${item.qty}  =  Rs. ${lineTotal.toLocaleString()}`;
+    });
+    return { lines, total };
+  };
+
+  window.resetOrder = () => {
+    Object.keys(order).forEach(k => delete order[k]);
+    document.querySelectorAll('.order-item__qty').forEach(el => (el.textContent = '0'));
+    updateSummary();
+  };
+
+  /* ---- Init ---- */
+  renderDrinksFood('drinks');
+  renderDrinksFood('food');
+  renderPizza();
+  updateSummary();
+
+})();
+</script>
+
+<!-- ===== FORM + TABS JS ===== -->
+<script defer>
+(function() {
+  'use strict';
+
+  const form      = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  if (!form) return;
+
+  const WA_NUMBER = '923422953399';
+  let activeTab   = 'message';
+
+  /* ---- Main tab switching ---- */
+  document.querySelectorAll('.form-tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeTab = btn.dataset.formTab;
+
+      document.querySelectorAll('.form-tab-btn').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      document.querySelectorAll('[data-form-panel]').forEach(p => p.classList.remove('active'));
+
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      document.querySelector(`[data-form-panel="${activeTab}"]`)?.classList.add('active');
+
+      submitBtn.innerHTML = activeTab === 'order'
+        ? '🛒 &nbsp;Send Order on WhatsApp'
+        : '💬 &nbsp;Send on WhatsApp';
+    });
+  });
+
+  /* ---- Validation helper ---- */
+  const markInvalid = (field) => {
+    field.style.borderColor = 'var(--color-primary)';
+    field.addEventListener('input', () => { field.style.borderColor = ''; }, { once: true });
+  };
+
+  /* ---- Submit ---- */
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const firstName = form.firstName.value.trim();
+    const lastName  = form.lastName.value.trim();
+    const phone     = form.phone.value.trim();
+    const fullName  = lastName ? `${firstName} ${lastName}` : firstName;
+
+    let valid = true;
+    if (!firstName) { markInvalid(form.firstName); valid = false; }
+    if (!phone)     { markInvalid(form.phone);     valid = false; }
+
+    let text = `Hi Café Bloom! 🌸\n\nName: ${fullName}\nPhone: ${phone}`;
+
+    if (activeTab === 'message') {
+      const message = form.message.value.trim();
+      if (!message) { markInvalid(form.message); valid = false; }
+      if (!valid) return;
+      text += `\n\nMessage:\n${message}`;
+
+    } else {
+      const orderData = window.getOrderSummary?.();
+      if (!orderData) {
+        const summary = document.getElementById('orderSummary');
+        summary.style.borderColor = 'var(--color-primary)';
+        setTimeout(() => { summary.style.borderColor = ''; }, 1200);
+        valid = false;
+      }
       if (!valid) return;
 
-      const fullName = lastName ? `${firstName} ${lastName}` : firstName;
-      const text = `Hi Café Bloom! 🌸\n\nName: ${fullName}\nPhone: ${phone}\n\nMessage:\n${message}`;
+      const note = form.orderNote?.value.trim();
+      text += `\n\n🛒 My Order:\n${orderData.lines.join('\n')}`;
+      text += `\n\n💰 Total: Rs. ${orderData.total.toLocaleString()}`;
+      if (note) text += `\n\n📝 Notes:\n${note}`;
+    }
 
-      submitBtn.textContent = 'Opening WhatsApp…';
-      submitBtn.disabled = true;
+    submitBtn.textContent = 'Opening WhatsApp…';
+    submitBtn.disabled = true;
 
-      window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
+    window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
 
-      setTimeout(() => {
-        form.reset();
-        submitBtn.innerHTML = '💬 &nbsp;Send on WhatsApp';
-        submitBtn.disabled = false;
-      }, 1500);
-    });
-  })();
-  </script>
+    setTimeout(() => {
+      form.reset();
+      window.resetOrder?.();
+      submitBtn.innerHTML = activeTab === 'order'
+        ? '🛒 &nbsp;Send Order on WhatsApp'
+        : '💬 &nbsp;Send on WhatsApp';
+      submitBtn.disabled = false;
+    }, 1500);
+  });
 
+})();
+</script>
 </body>
 </html>

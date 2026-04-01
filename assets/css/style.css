@@ -1604,7 +1604,7 @@ button {
 .form-submit {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
@@ -1613,6 +1613,205 @@ button {
   color: var(--color-brown);
   opacity: 0.45;
 }
+
+/* ===== FORM TABS — mirrors menu-tab-btn ===== */
+.form-tabs { display: flex; gap: 8px; margin-bottom: 28px; flex-wrap: wrap; }
+
+.form-tab-btn {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 10px 24px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-brown);
+  cursor: pointer;
+  opacity: 0.55;
+  transition: all 0.2s ease;
+}
+.form-tab-btn:hover { opacity: 0.85; }
+.form-tab-btn.active {
+  background: var(--color-primary);
+  color: #fff;
+  opacity: 1;
+  border-color: var(--color-primary);
+}
+
+.form-tab-panel { display: none; }
+.form-tab-panel.active { display: block; }
+
+/* ===== MESSAGE PANEL ===== */
+.message-panel__intro {
+  font-size: 0.9rem;
+  color: var(--color-brown);
+  opacity: 0.65;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+/* ===== ORDER CATEGORY SUB-TABS (outlined pills = visual hierarchy) ===== */
+.order-cat-tabs { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+.order-cat-btn {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 7px 16px;
+  border: 1.5px solid rgba(0,0,0,0.18);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-brown);
+  cursor: pointer;
+  opacity: 0.65;
+  transition: all 0.18s ease;
+}
+.order-cat-btn:hover { opacity: 1; border-color: var(--color-primary); color: var(--color-primary); }
+.order-cat-btn.active { border-color: var(--color-primary); color: var(--color-primary); opacity: 1; }
+
+.order-cat-panel { display: none; }
+.order-cat-panel.active { display: block; }
+
+/* ===== ORDER ITEMS ===== */
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  flex-wrap: wrap;
+}
+.order-item__emoji { font-size: 1.2rem; flex-shrink: 0; }
+.order-item__name {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-brown);
+  flex: 1;
+  min-width: 140px;
+}
+.order-item__price {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--color-brown);
+  opacity: 0.6;
+  min-width: 80px;
+}
+.order-item__controls { display: flex; align-items: center; gap: 10px; margin-left: auto; }
+.order-item__btn {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
+  background: transparent;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex; align-items: center; justify-content: center;
+}
+.order-item__btn:hover { background: var(--color-primary); color: #fff; }
+.order-item__qty { min-width: 24px; text-align: center; font-weight: 700; font-size: 0.95rem; color: var(--color-brown); }
+.order-item__size-select {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  padding: 7px 10px;
+  border: 1.5px solid rgba(0,0,0,0.15);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--color-brown);
+  cursor: pointer;
+}
+.order-item__add-btn {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 2px solid var(--color-primary);
+  background: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+.order-item__add-btn:hover { background: var(--color-primary); color: #fff; }
+
+/* ===== ORDER SUMMARY ===== */
+.order-summary {
+  margin-top: 24px;
+  border: 2px solid rgba(0,0,0,0.08);
+  border-radius: 16px;
+  padding: 20px;
+  background: rgba(255,255,255,0.6);
+  transition: border-color 0.3s ease;
+}
+.order-summary__empty {
+  text-align: center;
+  font-family: var(--font-accent);
+  font-size: 1rem;
+  color: var(--color-brown);
+  opacity: 0.5;
+  padding: 8px 0;
+}
+.order-summary__list { list-style: none; padding: 0; margin: 0 0 16px; }
+.order-summary__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  color: var(--color-brown);
+}
+.order-summary__item span:first-child { flex: 1; }
+.order-summary__item span:nth-child(2) { font-weight: 700; white-space: nowrap; }
+.order-summary__remove {
+  background: none; border: none;
+  color: var(--color-brown); opacity: 0.3;
+  cursor: pointer; font-size: 1rem; padding: 0 4px; line-height: 1;
+  transition: opacity 0.15s;
+}
+.order-summary__remove:hover { opacity: 0.8; }
+.order-summary__footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 14px; flex-wrap: wrap; gap: 12px;
+}
+.order-summary__total { font-family: var(--font-display); font-size: 1.1rem; color: var(--color-brown); }
+.order-summary__total strong { color: var(--color-primary); }
+.order-summary__clear {
+  font-family: var(--font-body); font-size: 0.8rem;
+  background: none; border: 1.5px solid rgba(0,0,0,0.2);
+  border-radius: 999px; padding: 5px 14px;
+  cursor: pointer; color: var(--color-brown); opacity: 0.6; transition: all 0.15s;
+}
+.order-summary__clear:hover { opacity: 1; border-color: var(--color-primary); color: var(--color-primary); }
+
+/* ===== OPTIONAL NOTES (inside order panel) ===== */
+.order-note { margin-top: 20px; }
+.order-note textarea { min-height: 72px; font-size: 0.88rem; }
+.form-optional { opacity: 0.5; font-size: 0.85em; }
+
+/* ===== SHARED FOOTER ===== */
+.form-shared {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+.form-shared__label {
+  display: block;
+  font-family: var(--font-accent);
+  font-size: 0.88rem;
+  color: var(--color-brown);
+  opacity: 0.55;
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+
+.form-shared input {
+  margin-bottom: 16px;
+}
+
 
 /* Form success state */
 .form-success {
