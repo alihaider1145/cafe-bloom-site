@@ -3,15 +3,18 @@
 
   /* ===== NAV SCROLL EFFECT ===== */
   const nav = document.querySelector('.nav');
+  const navStartedLight = nav?.classList.contains('nav--light');
 
   const handleNavScroll = () => {
     if (!nav) return;
     if (window.scrollY > 60) {
       nav.classList.add('nav--solid');
       nav.classList.remove('nav--transparent');
+      if (navStartedLight) nav.classList.remove('nav--light');
     } else {
       nav.classList.remove('nav--solid');
       nav.classList.add('nav--transparent');
+      if (navStartedLight) nav.classList.add('nav--light');
     }
   };
 
@@ -27,15 +30,22 @@
     mobileNav?.classList.add('open');
     overlay?.classList.add('open');
     document.body.style.overflow = 'hidden';
+    if (hamburger) hamburger.setAttribute('aria-expanded', 'true');
   };
 
   const closeMobileNav = () => {
     mobileNav?.classList.remove('open');
     overlay?.classList.remove('open');
     document.body.style.overflow = '';
+    if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
   };
 
-  hamburger?.addEventListener('click', openMobileNav);
+  const toggleMobileNav = () => {
+    const isOpen = mobileNav?.classList.contains('open');
+    isOpen ? closeMobileNav() : openMobileNav();
+  };
+
+  hamburger?.addEventListener('click', toggleMobileNav);
   overlay?.addEventListener('click', closeMobileNav);
   document.querySelectorAll('.nav__mobile a').forEach(link => {
     link.addEventListener('click', closeMobileNav);
@@ -84,15 +94,55 @@
   const tabBtns = document.querySelectorAll('.menu-tab-btn');
   const tabPanels = document.querySelectorAll('.menu-tab-panel');
 
+  const activateTab = (target) => {
+    tabBtns.forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-selected', 'false');
+    });
+    tabPanels.forEach(p => p.classList.remove('active'));
+    const matchingBtn = document.querySelector(`.menu-tab-btn[data-tab="${target}"]`);
+    const matchingPanel = document.querySelector(`.menu-tab-panel[data-panel="${target}"]`);
+    if (matchingBtn) {
+      matchingBtn.classList.add('active');
+      matchingBtn.setAttribute('aria-selected', 'true');
+    }
+    if (matchingPanel) matchingPanel.classList.add('active');
+  };
+
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      const target = btn.dataset.tab;
-      tabBtns.forEach(b => b.classList.remove('active'));
-      tabPanels.forEach(p => p.classList.remove('active'));
-      btn.classList.add('active');
-      document.querySelector(`.menu-tab-panel[data-panel="${target}"]`)?.classList.add('active');
+      activateTab(btn.dataset.tab);
     });
   });
+
+  // Activate tab from URL hash on load (e.g. menu.html#pizza)
+  if (tabBtns.length > 0 && window.location.hash) {
+    const hashTarget = window.location.hash.replace('#', '');
+    const matchingBtn = document.querySelector(`.menu-tab-btn[data-tab="${hashTarget}"]`);
+    if (matchingBtn) activateTab(hashTarget);
+  }
+
+  /* ===== ANNOUNCEMENTS FILTER PILLS (events.html) ===== */
+  const filterPills = document.querySelectorAll('.events-hero__pill[data-filter]');
+  const eventCards = document.querySelectorAll('.event-card');
+
+  if (filterPills.length > 0) {
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const filter = pill.dataset.filter;
+        filterPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+
+        eventCards.forEach(card => {
+          if (filter === 'all' || card.classList.contains(`event-card--${filter}`)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
 
   // Intersection Observer for scroll-triggered item animations in the Why Us section
   const items = document.querySelectorAll('.why-us__item');

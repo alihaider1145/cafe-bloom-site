@@ -57,10 +57,11 @@
             New menus, café updates, special events, and seasonal deals — this is where you find out first.
           </p>
           <div class="events-hero__pills">
-            <span class="events-hero__pill">🍕 New Menu</span>
-            <span class="events-hero__pill">☕ Café Updates</span>
-            <span class="events-hero__pill">🎉 Events</span>
-            <span class="events-hero__pill">🏷️ Promotions</span>
+            <button class="events-hero__pill active" data-filter="all">🌸 All</button>
+            <button class="events-hero__pill" data-filter="menu">🍕 New Menu</button>
+            <button class="events-hero__pill" data-filter="update">☕ Café Updates</button>
+            <button class="events-hero__pill" data-filter="event">🎉 Events</button>
+            <button class="events-hero__pill" data-filter="promo">🏷️ Promotions</button>
           </div>
         </div>
       </div>
@@ -360,11 +361,11 @@
         <div class="footer__menu-links">
           <h3 class="footer__heading">Menu</h3>
           <ul class="footer__links" role="list">
-            <li><a href="menu.html">Coffee</a></li>
-            <li><a href="menu.html">Drinks</a></li>
-            <li><a href="menu.html">Pizza</a></li>
-            <li><a href="menu.html">Burgers</a></li>
-            <li><a href="menu.html">Pasta</a></li>
+            <li><a href="menu.html#drinks">Coffee</a></li>
+            <li><a href="menu.html#drinks">Drinks</a></li>
+            <li><a href="menu.html#pizza">Pizza</a></li>
+            <li><a href="menu.html#food">Burgers</a></li>
+            <li><a href="menu.html#food">Pasta</a></li>
           </ul>
         </div>
         <div class="footer__contact-info">
@@ -411,6 +412,10 @@
     </div>
   </footer>
 
+  <a href="https://wa.me/923422953399" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Order on WhatsApp">
+    <span aria-hidden="true">💬</span>
+    <span class="whatsapp-fab__tooltip">Order on WhatsApp</span>
+  </a>
   <script src="assets/js/main.js" defer></script>
 
   <!-- ===== MODAL JS ===== -->
