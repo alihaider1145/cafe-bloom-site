@@ -2090,22 +2090,16 @@ button {
   margin-top: 2px;
 }
 
-.contact-sidebar__ig-link {
+.contact-sidebar__social-icon {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--color-brown);
-  font-weight: 700;
-  font-size: 0.95rem;
-  transition: var(--transition);
+  gap: 16px;
 }
 
-.contact-sidebar__ig-link:hover {
-  color: var(--color-primary);
-}
-
-.contact-sidebar__ig-icon {
-  font-size: 1.4rem;
+.contact-sidebar__social-icon img{
+  height: 35px;
+  width: auto;
+  object-fit: cover;
+  filter: brightness(1.1);
 }
 
 /* ===== FOOTER INSTAGRAM LINK ===== */
